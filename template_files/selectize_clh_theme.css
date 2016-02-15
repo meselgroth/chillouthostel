@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19/07/2015, 09:09:58
+    Author     : claudiomdp
+*/
+
+
+.selectize-dropdown {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    color: white; 
+}
+
+.selectize-dropdown [data-selectable] {
+    
+}
+
+.selectize-dropdown [data-selectable] .highlight {
+  background: rgba(125, 168, 208, 0.2);
+  
+}
+
+
+.selectize-dropdown .optgroup-header {
+  color: #303030;
+  background: #ffffff;
+  
+}
+.selectize-dropdown .active {
+  background-color: #f5fafd;
+  color: #495c68;
+}
+.selectize-dropdown .active.create {
+  color: #495c68;
+}
+.selectize-dropdown .create {
+  color: rgba(48, 48, 48, 0.5);
+}
+.selectize-dropdown-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 200px;
+}
+
+#select_moneda .selectize-dropdown {
+    width: 200px !important; 
+}
+#select_moneda2 .selectize-dropdown {
+    width: 200px !important; 
+}

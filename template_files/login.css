@@ -1,0 +1,204 @@
+.checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 0%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+
+.login_container{
+    z-index: 10;
+    display: none;
+    right: 0;
+    top:75px;
+    margin-right:20px;
+    position:absolute;
+}
+
+.login_containerm{
+    z-index: 10;
+    display: none;
+    left: 50%;
+	transform: translatex(-50%); /*LO COLOCA CENTRADO EN EL MEDIO*/
+    top:75px;
+    margin-right:20px;
+    position:fixed;
+}
+
+.overlay_modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index:9;
+    background-color:rgba(0,0,0,0.7);
+}
+
+.fuente-login-grande{
+	font-size:11px;
+	color:#ffffff;
+}
+
+.linea-punteada-login{
+	border-bottom: 2px dotted #787878;
+    clear: both;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+
+.nueva-division-menu{
+	text-align:left;
+}
+
+.btn-clean {
+  display: inline-block;
+  background: none;
+  color:#ffffff;
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 10px;
+  padding:6px 0px 6px 0px;
+}
+
+.responsiveOffArt{
+	text-align:right;
+}
+
+.btn-clean i {
+  position: relative;
+  top: 1px;
+  margin-left: 7px;
+  font-size: 1.15em;
+}
+
+.btn-clean i.ion-ios-arrow-down {
+  top: 2px;
+  margin-left: 8px;
+}
+
+.btn-clean:hover,
+.btn-clean:focus,
+.btn-clean:active,
+.clean.button-group.open .button {
+  border-color: #8f8f8f;
+  color: #808080;
+  text-decoration: none;
+}
+
+.form-input:focus {
+  border-color: #8f8f8f;
+}
+
+
+/* Required for Dropdowns */
+.clean.dropdown {
+  position: relative;
+}
+.dropdown-toggle:focus {
+  outline: 0;
+}
+.clean.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: -90px;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding-top:0px;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #fafafa;
+  border: 1px solid #8f8f8f;
+  border-radius: 0px;
+  margin-top:-2px;
+}
+.clean.dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #8f8f8f;
+}
+.clean.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 2;
+  color: #5e5e5e;
+  white-space: nowrap;
+  cursor:pointer;
+}
+.clean.dropdown-menu > li > a:hover,
+.clean.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #808080;
+  background-color: #f3f3f3;
+}
+
+.clean.button-group,
+.clean.button-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.clean.button-group > .button,
+.clean.button-group-vertical > .button {
+  position: relative;
+  float: left;
+}
