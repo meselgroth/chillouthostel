@@ -107,7 +107,7 @@ h5 {
 }
 h6 {
    font-size: 15px;
-   color: #a6ca3e;
+   color: #2E3192;
    margin: 0 20px 0 0;
    float: left;
    text-align: left;
@@ -234,14 +234,14 @@ select {
 /* BEGIN REUTILIZABLE */
 #nav {
    top: -130px;
-   background: rgba(0, 0, 0, 0.6);
+   background: rgba(255, 255, 255, 0.6);
    position:fixed;
    width: 100% !important;
    margin: 0 !important;
    max-width: 100%;
    padding: 15px;
    z-index: 1000;
-   background: rgba(0, 0, 0, 0.8) !important;
+   background: rgba(255, 255, 255, 0.6) !important;
    display: block;
    transition:all 0.3s ease-in-out;
    -webkit-transition:all 0.3s ease-in-out;
@@ -352,8 +352,9 @@ select {
 #browse {
    width: 100%;
    padding: 20px;
-   background: rgba(0, 0, 0, 0.6);
+   background: #00AEEF;
    height: 73px;
+   opacity: 0.6;
 }
 #select_ciudad {
    float: left;
@@ -503,7 +504,7 @@ select {
 #idiomas {
    float: right;
    clear: both;
-   margin: 0;
+   margin: 23px 23px;
    padding: 0;
 }
    #idiomas li {
@@ -520,7 +521,7 @@ select {
       color: #fffefe;
       text-transform: uppercase;
       font-weight: 300;
-      background-color: #a6ca3e;
+      background-color: #2E3192;
       border-radius: 50%;
       width: 23px;
       height: 23px;
@@ -560,7 +561,7 @@ select {
       #destinos li.circle {
          width: 7px;
          height: 7px;
-         background-color: #a6ca3e;
+         background-color: #2E3192;
          border-radius: 50%;
          margin: 4px 23px 0 0;
       }
@@ -1200,3 +1201,18 @@ select {
     
     
     
+
+
+img #logo_chillouthostel {
+    width: 122px;
+    height: 81px;
+}
+
+.fs-19 {
+    font-size: 18px;
+}
+
+img.logo {
+    width: 225px;
+    height: 97px;
+}
