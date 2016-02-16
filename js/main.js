@@ -23,12 +23,6 @@ $(document).ready(function () {
     $('#nochesDesdeC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
     $('#nochesHastaC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
 
-
-    $('#cantPersonasS').selectize();
-    $('#cantPersonasC').selectize();
-    $('#idHostelC').selectize();
-    $('#idHostelS').selectize();
-
     //CAMBIOS DEL BOOKING 1 AL 2
     $("#idHostelC").change(function () {
         if (!sincronisando) {
