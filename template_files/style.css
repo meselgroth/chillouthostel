@@ -241,7 +241,7 @@ select {
    max-width: 100%;
    padding: 15px;
    z-index: 1000;
-   background: rgba(255, 255, 255, 0.6) !important;
+   background: rgba(255, 255, 255, 0.7) !important;
    display: block;
    transition:all 0.3s ease-in-out;
    -webkit-transition:all 0.3s ease-in-out;
@@ -1215,4 +1215,9 @@ img #logo_chillouthostel {
 img.logo {
     width: 225px;
     height: 97px;
+}
+
+.bg-transp {
+    /* background: rgba(11, 118, 246,0.6); */
+    border-radius: 22px;
 }
