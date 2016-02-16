@@ -352,7 +352,7 @@ select {
 #browse {
    width: 100%;
    padding: 20px;
-   background: #00AEEF;
+   background: white;
    height: 73px;
    opacity: 0.6;
 }
