@@ -9,9 +9,9 @@
   padding: 4px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
-  border-radius: 0px; /*REDONDEO DEL CONTENEDOR*/
+  border-radius: 0px;/*REDONDEO DEL CONTENEDOR*/
   direction: ltr;
-  background: rgba(0, 0, 0, 0.9) none repeat scroll 0 0; /*COLOR DE FONDO*/
+  background: rgba(255,255,255, 0.9) none repeat scroll 0 0;/*COLOR DE FONDO*/
   border-color:#646464;
 }
 .datepicker-inline {
@@ -100,7 +100,7 @@
   -moz-border-radius: 4px;
   border-radius: 4px;
   border: none;
-  color:#a6ca3e; /*COLOR DE TODO EL RESTO DE LOS NUMEROS DIAS*/
+  color: #056839;/*COLOR DE TODO EL RESTO DE LOS NUMEROS DIAS*/
 }
 
 .table-striped .datepicker table tr td,
@@ -425,12 +425,12 @@
 .datepicker thead tr:first-child th,
 .datepicker tfoot tr th {
   cursor: pointer;
-  color:white;
+  color: black;
 }
 .datepicker thead tr:first-child th:hover,
 .datepicker tfoot tr th:hover {
   background: #eeeeee;
-  background-color:#a6ca3e;
+  background-color: #00AEEF;
 }
 .datepicker .cw {
   font-size: 10px;

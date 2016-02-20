@@ -78,49 +78,24 @@
     <div class="overlay_modal hidden-lg hidden-md" style="display:none;">
         <div class="login_containerm hidden-lg hidden-md" id="login_containerm" style="max-width: 235px; margin-left: -15px;"></div> <!--VERSION MOBILE-->
     </div>
-    <script>
-        function abrirRecepcion(sAction,iReserva,tipoLogin){
-            if(tipoLogin == null){
-                var tipoLogin = "";
-            }
-
-            $(".cuerpo").css("cursor","wait");
-            
-            if(tipoLogin == 'm'){ //osea si es tipo mobile
-                $(".overlay_modal").css("display","");
-                $("#close-button").click();
-            }
-
-            return false;
-        }
-
-        function cerrarLogin(){
-            jQuery("#login_container").hide();
-            jQuery("#login_containerm").hide();
-            $(".overlay_modal").css("display","none");
-        }
-
-        $( document ).ready(function() { //cambia el favicon de la web
-            jQuery('link[rel="shortcut icon"]').attr('href','/favicon.ico');
-        })
-
-    </script>
     <!-- BEGIN SCROLL NAV -->
     <div id="nav-sticky-wrapper" class="sticky-wrapper" style="height: 180px;">
         <div class="nav-down" id="nav" style="width: 1263px;">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-3 col-lg-2">
-                        <a href="https://chillouthostelboracay.com/en/#" id="logo_chillouthostel">
-                            <img src="/images/logo.png" class="logo" alt="Chill Out">
-                        </a>
+                    <div class="col-xs-12 col-sm-3 col-lg-1">
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-8">
+                    <div class="col-xs-12 col-sm-6 col-lg-9">
+                        <div class="input_fecha">
+                            <a href="https://chillouthostelboracay.com" id="logo_chillouthostel">
+                                <img src="/images/logo.png" alt="Chill Out" class="logo">
+                            </a>
+                        </div>
                         <div id="browse">
                             <!-- BEGIN INPUT -->
                             <div class="input_fecha">
                                 <div class="icon">
-                                    <span class="glyphicon glyphicon-calendar fs-19"></span>
+                                    <span class="glyphicon glyphicon-calendar color-db fs-19"></span>
                                 </div>
                                 <input placeholder="Arrival" id="nochesDesdeC" readonly="">
                             </div>
@@ -128,7 +103,7 @@
                             <!-- BEGIN INPUT -->
                             <div class="input_fecha">
                                 <div class="icon">
-                                    <span class="glyphicon glyphicon-calendar fs-19"></span>
+                                    <span class="glyphicon glyphicon-calendar color-db fs-19"></span>
                                 </div>
                                 <input placeholder="Checkout" id="nochesHastaC" readonly="">
                             </div>
@@ -136,7 +111,7 @@
                             <!-- BEGIN SELECT -->
                             <div class="btn-group" id="select_personas">
                                 <div class="icon">
-                                    <span class="glyphicon glyphicon-user fs-19"></span>
+                                    <span class="glyphicon glyphicon-user color-db fs-19"></span>
                                 </div>
                                 <select id="cantPersonasC" class="demo-default selectized" placeholder="INVITADOS" readonly="" tabindex="-1" style="display: none;"><option value="1" selected="selected">1</option></select><div class="selectize-control demo-default single"><div class="selectize-input items full has-options has-items"><div data-value="1" class="item">1</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single demo-default" style="display: none; width: 100px; top: 33px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
                             </div>
@@ -145,7 +120,7 @@
 
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-3 col-lg-2">
+                    <div class="col-xs-12 col-sm-3 col-lg-1">
                         <ul id="idiomas">
                             <li>
                                 <a href="https://chillouthostelboracay.com/es/">es</a>
@@ -154,7 +129,7 @@
                                 <a href="https://chillouthostelboracay.com/en/" class="active">en</a>
                             </li>
                             <li>
-                                <a href="https://chillouthostelboracay.com/pt/">pt</a>
+                                <a href="https://chillouthostelboracay.com/it/">it</a>
                             </li>
                         </ul>
                     </div>
@@ -168,10 +143,7 @@
         <!-- BEGIN NAV -->
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-3 col-lg-2 bg-transp">
-                    <a href="https://chillouthostelboracay.com" id="logo_chillouthostel">
-                        <img src="/images/logo.png" alt="Chill Out" class="logo">
-                    </a>
+                <div class="col-xs-12 col-sm-3 col-lg-1">
                     <!-- BEGIN RESPONSIVE NAV -->
                     <div class="menu-wrap">
                         <nav class="menu">
@@ -187,7 +159,7 @@
                                         <a href="https://chillouthostelboracay.com/en/" class="active">en</a>
                                     </li>
                                     <li>
-                                        <a href="https://chillouthostelboracay.com/pt/">pt</a>
+                                        <a href="https://chillouthostelboracay.com/it/">it</a>
                                     </li>
                                 </ul>
                                 <a style="cursor:pointer;" class="visible-lg visible-md iniciar-sesion-login" onclick="return abrirRecepcion();">Log in</a>
@@ -206,12 +178,17 @@
                     <button class="menu-button" id="open-button">Open Menu</button>
                     <!-- END RESPONSIVE NAV -->
                 </div>
-                <div class="col-xs-12 col-sm-6 col-lg-8">
+                <div class="col-xs-12 col-sm-6 col-lg-10">
+                    <div class="input_fecha">
+                        <a href="https://chillouthostelboracay.com" id="logo_chillouthostel">
+                            <img src="/images/logo.png" alt="Chill Out" class="logo">
+                        </a>
+                    </div>
                     <div id="browse">
                         <!-- BEGIN INPUT -->
                         <div class="input_fecha">
                             <div class="icon">
-                                <span class="glyphicon glyphicon-calendar fs-19"></span>
+                                <span class="glyphicon glyphicon-calendar color-db fs-19"></span>
                             </div>
                             <input placeholder="Arrival" id="nochesDesdeS" readonly="">
                         </div>
@@ -219,7 +196,7 @@
                         <!-- BEGIN INPUT -->
                         <div class="input_fecha">
                             <div class="icon">
-                                <span class="glyphicon glyphicon-calendar fs-19"></span>
+                                <span class="glyphicon glyphicon-calendar color-db fs-19"></span>
                             </div>
                             <input placeholder="Checkout" id="nochesHastaS" readonly="">
                         </div>
@@ -227,7 +204,7 @@
                         <!-- BEGIN SELECT -->
                         <div class="btn-group" id="select_personas">
                             <div class="icon">
-                                <span class="glyphicon glyphicon-user fs-19"></span>
+                                <span class="glyphicon glyphicon-user color-db fs-19"></span>
                             </div>
                             <select id="cantPersonasS" class="demo-default hidden-xs hidden-sm cantPersonasS selectized" placeholder="INVITADOS" readonly="" tabindex="-1" style="display: none;"><option value="1" selected="selected">1</option></select><div class="selectize-control demo-default hidden-xs hidden-sm cantPersonasS single"><div class="selectize-input items full has-options has-items"><div data-value="1" class="item">1</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single demo-default hidden-xs hidden-sm cantPersonasS" style="display: none; width: 100px; top: 33px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
                             <select class="visible-xs visible-sm" id="cantPersonasMobileS" onchange="cambiarSelect(&#39;cantPersonasS&#39;,&#39;cantPersonasMobileS&#39;)" style="background:none;border:1px solid #8d8e8f;height:33px;width:100%;padding:5px 10px 5px 32px;font-size:14px;color:#ffffff;">
@@ -250,7 +227,7 @@
                         <a onclick="enviarBookingHome(&#39;S&#39;)" class="btn" style="cursor:pointer;">SEARCH</a>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-3 col-lg-2 responsiveOffArt">
+                <div class="col-xs-12 col-sm-3 col-lg-1 responsiveOffArt">
                     <ul id="idiomas">
                         <li>
                             <a href="https://chillouthostelboracay.com/es/">es</a>
@@ -259,14 +236,13 @@
                             <a href="https://chillouthostelboracay.com/en/" class="active">en</a>
                         </li>
                         <li>
-                            <a href="https://chillouthostelboracay.com/pt/">pt</a>
+                            <a href="https://chillouthostelboracay.com/it/">it</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- END NAV -->
-        <!-- BEGIN TITULAR -->
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -274,90 +250,46 @@
                 </div>
             </div>
         </div>
-        <!-- END TITULAR -->
-        <!-- BEGIN DESTINOS -->
+        <!-- BEGIN MENU -->
         <div class="container" id="destinos">
             <div>
-                <h6><span>THINGS TO DO</span></h6>
                 <ul>
                     <li>
-                        <a id="destino_a">ISLAND HOPPING</a>
+                        <a id="destino_a" href="#specialoffers">SPECIAL OFFERS</a>
+                    </li>
+                    <li>
+                        <a id="destino_a" href="#findus">FIND US</a>
                     </li>
 
-                    <li class="circle"></li>
                     <li>
-                        <a id="destino_b">KITE SURFING</a>
+                        <a id="destino_b" href="#contactus">CONTACT US</a>
                     </li>
 
-                    <li class="circle"></li>
                     <li>
-                        <a id="destino_c">FLYBOARD</a>
+                        <a id="destino_d" href="#gallery">GALLARY</a>
                     </li>
 
-                    <li class="circle"></li>
                     <li>
-                        <a id="destino_d">CHILL AND SPA</a>
+                        <a id="destino_e" href="#social">GET INVOLVED</a>
                     </li>
 
-                    <li class="circle"></li>
                     <li>
-                        <a id="destino_e">PARTY</a>
+                        <a id="destino_f" href="#">THINGS TO DO</a>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="destinoOption" id="destinoOption_a">
+        <div class="destinoOption" id="destinoOption_f">
             <div>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/34-bonito.html">Bonito</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/11-buzios.html">Buzios</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/40-suites-curitiba.html">Curitiba</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/19-hostel-florianopolis.html">Florianópolis</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/38-hostel-fortaleza.html">Fortaleza</a>
-            </div><div>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/37-hostel-foz-do-iguacu.html">Foz do Iguaçu</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/5-hostel-ilha-grande.html">Ilha Grande</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/20-hostel-itacare.html">Itacaré</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/36-hostel-joao-pessoa.html">João Pessoa</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/34-hostel-maresias.html">Maresias</a>
-            </div><div>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/18-hostel-morro-de-sao-paulo.html">Morro São Paulo</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/26-hostel-natal.html">Natal</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/14-paraty.html">Paraty</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/32-hostel-porto-de-galinhas.html">Porto de Galinhas</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/12-rio-de-janeiro.html">Rio de Janeiro</a>
-            </div><div>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/11-hostel-salvador.html">Salvador</a>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/30-suites-sao-paulo.html">São Paulo</a>
+                <a href="#">ISLAND HOPPING</a>
+                <a href="#">KITE SURFING</a>
+                <a href="#">FLYBOARD</a>
+                <a href="#">CHILL AND SPA</a>
+                <a href="#">PARTY</a>
             </div>
         </div>
-        <div class="destinoOption" id="destinoOption_b">
-            <div>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/23-hostel-mar-del-plata.html">Mar del Plata</a>
-            </div>
-
-        </div>
-        <div class="destinoOption" id="destinoOption_c" style="display: none;">
-            <div>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/31-hostel-colonia.html">Colonia del Sacramento</a>
-            </div>
-            <div>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/7-hostel-montevideo.html">Montevideo</a>
-            </div>
-
-        </div>
-        <div class="destinoOption" id="destinoOption_d">
-            <div>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/9-hostel-santiago.html">Santiago</a>
-            </div>
-
-        </div>
-        <div class="destinoOption" id="destinoOption_e">
-            <div>
-                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/16-hostel-lima.html">Lima</a>
-            </div>
-
-        </div>
+        <!--END MENU-->
         <!-- BEGIN CAROUSEL -->
         <div id="carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -386,277 +318,32 @@
         </div>
         <!-- END CAROUSEL -->
     </header>
-    <!-- END HEADER --> <!--MOD ENCABEZADO esta en la carpeta html del template-->
-    <!-- BEGIN DESTINOS -->
-
-    <style>
-        h4 {
-            font-weight: 400 !important;
-        }
-    </style>
-    <section id="section_destinos">
+    <section id="social">
         <div class="container">
-            <!-- NUEVO ESPACIO DE PROMOS --->
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-lg-4">
-                    <!-- BEGIN CAROUSEL -->
-                    <div id="carousel-promocion" class="carousel-promocion slide" data-ride="carousel" style="padding-bottom:30px;">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img border="0" src="./template_files/513244_1453741748.jpg">
-                            </div>
+                    <div id="fb-root"></div>
+                    <div class="fb-page"
+                         data-href="https://www.facebook.com/CSIBoracay"
+                         data-tabs="timeline" data-small-header="true" data-adapt-container-width="true"
+                         data-hide-cover="true" data-show-facepile="true">
+                        <div class="fb-xfbml-parse-ignore">
+                            <blockquote cite="https://www.facebook.com/CSIBoracay">
+                                <a href="https://www.facebook.com/CSIBoracay">Cool Stay Inn &quot;CSI Boracay&quot;</a>
+                            </blockquote>
                         </div>
                     </div>
-                    <!-- END CAROUSEL -->
                 </div>
                 <div class="col-xs-12 col-sm-6 col-lg-8">
-                    <!-- BEGIN CAROUSEL -->
-                    <div id="carousel-promocion" class="carousel-promocion slide" data-ride="carousel" style="padding-bottom:30px;">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img border="0" src="./template_files/517808_1453741568.jpg">
-                            </div>
-                        </div>
+                    <div id="TA_selfserveprop820" class="TA_selfserveprop">
+                        <ul id="kfJgPAO" class="TA_links XhLtiy">
+                            <li id="3hWR3dBW" class="4H3mwSW9n">
+                                <a target="_blank" href="https://www.tripadvisor.co.uk/"><img src="https://www.tripadvisor.co.uk/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- END CAROUSEL -->
-                </div>
-                <!-- BEGIN SEPARADOR -->
-                <div class="separador"></div>
-                <!-- END SEPARADOR -->
-            </div>
-            <!-- FIN NUEVO ESPACIO DE PROMOS --->
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-lg-4">
-                    <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/11-buzios.html" class="banner_325px responsiveOffArt">
-                        <div>
-                            <h3>Buzios</h3>
-                            <h4>FROM <b>U$S 11.24</b></h4>
-                        </div>
-                        <img src="./template_files/1449064291.jpg" alt="Buzios">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-8">
-                    <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/11-hostel-salvador.html" class="banner_325px responsiveOffArt animateTop">
-                        <div>
-                            <h3>Salvador</h3>
-                            <h4>FROM <b>U$S 9.99</b></h4>
-                        </div>
-                        <img src="./template_files/1437660595.jpg" alt="Salvador">
-                    </a>
-                </div>
-                <!-- BEGIN SEPARADOR -->
-                <div class="separador"></div>
-                <!-- END SEPARADOR -->
-                <div class="col-xs-12 col-sm-12 col-lg-4">
-                    <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/12-rio-de-janeiro.html" class="banner_667px responsiveOffArt">
-                        <div>
-                            <h3>Rio de Janeiro</h3>
-                            <h4>FROM <b>U$S 14.98</b></h4>
-                        </div>
-                        <img src="./template_files/1437660573.jpg" alt="Rio de Janeiro">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4">
-                    <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/19-hostel-florianopolis.html" class="banner_325px">
-                        <div>
-                            <h3>Florianópolis</h3>
-                            <h4>FROM <b>U$S 14.98</b></h4>
-                        </div>
-                        <img src="./template_files/1437659711.jpg" alt="Florianópolis">
-                    </a>
-                    <!-- BEGIN CAROUSEL -->
-                    <div id="carousel-promocion" class="carousel-promocion slide" data-ride="carousel" style="padding-bottom:30px;">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item">
-                                <a style="cursor:pointer;" target="_blank" href="https://chillouthostelboracay.com/en/?option=com_chillouthostel&amp;controller=micrositio&amp;idHostel=4">
-                                    <img border="0" src="./template_files/44957_1453317306.jpg">
-                                </a>
-                            </div>
-                            <div class="item active">
-                                <a style="cursor:pointer;" target="_blank" href="https://chillouthostelboracay.com/pt/component/chillouthostel/hostels/37-hostel-foz-do-iguacu.html">
-                                    <img border="0" src="./template_files/217749_1453316951.jpg">
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a style="cursor:default;" href="">
-                                    <img border="0" src="./template_files/315686_1444909750.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END CAROUSEL -->
-                </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4">
-                    <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/37-hostel-foz-do-iguacu.html" class="banner_325px">
-                        <div>
-                            <h3>Foz do Iguaçu</h3>
-                            <h4>FROM <b>U$S 11.24</b></h4>
-                        </div>
-                        <img src="./template_files/1437659910.jpg" alt="Foz do Iguaçu">
-                    </a>
-                    <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/32-hostel-porto-de-galinhas.html" class="banner_263px">
-                        <div>
-                            <h3>Porto de Galinhas</h3>
-                            <h4>FROM <b>U$S 14.98</b></h4>
-                        </div>
-                        <img src="./template_files/1442251943.jpg" alt="Porto de Galinhas">
-                    </a>
-                    <div id="masDestinos">MORE DESTINATIONS</div>
-                </div>
-                <!-- BEGIN SEPARADOR -->
-                <div class="separador"></div>
-                <!-- END SEPARADOR -->
-                <div id="destOcultos">
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/20-hostel-itacare.html" class="banner_325px">
-                            <div>
-                                <h3>Itacaré</h3>
-                                <h4>FROM <b>U$S 14.98</b></h4>
-                            </div>
-                            <img src="./template_files/1442925400.jpg" alt="Itacaré">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/26-hostel-natal.html" class="banner_325px">
-                            <div>
-                                <h3>Natal</h3>
-                                <h4>FROM <b>U$S 7.43</b></h4>
-                            </div>
-                            <img src="./template_files/1439475378.jpg" alt="Natal">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/40-suites-curitiba.html" class="banner_325px">
-                            <div>
-                                <h3>Curitiba</h3>
-                                <h4>FROM <b>U$S 25.36</b></h4>
-                            </div>
-                            <img src="./template_files/1439905893.jpg" alt="Curitiba">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/23-hostel-mar-del-plata.html" class="banner_325px">
-                            <div>
-                                <h3>Mar del Plata</h3>
-                                <h4>FROM <b>U$S 13.53</b></h4>
-                            </div>
-                            <img src="./template_files/1437660014.jpg" alt="Mar del Plata">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/34-bonito.html" class="banner_325px">
-                            <div>
-                                <h3>Bonito</h3>
-                                <h4>FROM <b>U$S 12.49</b></h4>
-                            </div>
-                            <img src="./template_files/1442357929.jpg" alt="Bonito">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/31-hostel-colonia.html" class="banner_325px">
-                            <div>
-                                <h3>Colonia del Sacramento</h3>
-                                <h4>FROM <b>U$S 12.19</b></h4>
-                            </div>
-                            <img src="./template_files/1439475298.jpg" alt="Colonia del Sacramento">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/30-suites-sao-paulo.html" class="banner_325px">
-                            <div>
-                                <h3>São Paulo</h3>
-                                <h4>FROM <b>U$S 20.54</b></h4>
-                            </div>
-                            <img src="./template_files/1442252807.jpg" alt="São Paulo">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/16-hostel-lima.html" class="banner_325px">
-                            <div>
-                                <h3>Lima</h3>
-                                <h4>FROM <b>U$S 8.71</b></h4>
-                            </div>
-                            <img src="./template_files/1442252867.jpg" alt="Lima">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/9-hostel-santiago.html" class="banner_325px">
-                            <div>
-                                <h3>Santiago</h3>
-                                <h4>FROM <b>U$S 12.8</b></h4>
-                            </div>
-                            <img src="./template_files/1437660614.jpg" alt="Santiago">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/38-hostel-fortaleza.html" class="banner_325px">
-                            <div>
-                                <h3>Fortaleza</h3>
-                                <h4>FROM <b>U$S 8.74</b></h4>
-                            </div>
-                            <img src="./template_files/1437659728.jpg" alt="Fortaleza">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/14-paraty.html" class="banner_325px">
-                            <div>
-                                <h3>Paraty</h3>
-                                <h4>FROM <b>U$S 12.49</b></h4>
-                            </div>
-                            <img src="./template_files/1442253121.jpg" alt="Paraty">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/18-hostel-morro-de-sao-paulo.html" class="banner_325px">
-                            <div>
-                                <h3>Morro São Paulo</h3>
-                                <h4>FROM <b>U$S 29.22</b></h4>
-                            </div>
-                            <img src="./template_files/1437660427.jpg" alt="Morro São Paulo">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/36-hostel-joao-pessoa.html" class="banner_325px">
-                            <div>
-                                <h3>João Pessoa</h3>
-                                <h4>FROM <b>U$S 14.09</b></h4>
-                            </div>
-                            <img src="./template_files/1437659968.jpg" alt="João Pessoa">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/5-hostel-ilha-grande.html" class="banner_325px">
-                            <div>
-                                <h3>Ilha Grande</h3>
-                                <h4>FROM <b>U$S 21.23</b></h4>
-                            </div>
-                            <img src="./template_files/1439475318.jpg" alt="Ilha Grande">
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/11-buzios.html" class="banner_325px responsiveOffArt">
-                            <div>
-                                <h3>Buzios</h3>
-                                <h4>FROM <b>U$S 11.24</b></h4>
-                            </div>
-                            <img src="./template_files/1449064291.jpg" alt="Buzios">
-                        </a>
-                    </div>
+                    <script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=820&amp;locationId=7600025&amp;lang=en_UK&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true&amp;display_version=2"></script>
+
                 </div>
             </div>
         </div>
@@ -674,7 +361,7 @@
                 <div class="row">
                     <div class="col-md-2">&nbsp;</div>
                     <div class="col-md-8">
-                        <iframe src="" width="100%" height="460" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                        <iframe width="100%" height="460" src="https://www.youtube.com/embed/0mjWfCaAMZk" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="col-md-2">&nbsp;</div>
                 </div>
@@ -682,6 +369,12 @@
         </div>
     </section>
     <!-- END VIDEO -->
+    
+    <div class="map" id="findus">
+        <div class="overlay" onclick="style.pointerEvents='none'"></div>
+        <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfx52nz08pTMRWxWXgwMRPUk&key=AIzaSyC6re0jcA5IBTTm71PlM-JwlNWy4ktmv1w"> </iframe>
+    </div>
+
     <!-- BEGIN INFO -->
     <section id="sectionIcon" class="responsiveOffArt">
         <div class="container">
@@ -916,7 +609,7 @@ If another company offers a lower publicly available rate, we will match that ra
             </div>
         </div>
     </footer>
-    <!-- END FOOTER --> <!--MOD PIE esta en la carpeta html del template-->
+    <!-- END FOOTER -->
 
     <script src="./template_files/bootstrap.min.js"></script>
     <script src="./template_files/classie.js"></script>
@@ -936,8 +629,7 @@ If another company offers a lower publicly available rate, we will match that ra
     <script src="./template_files/main.js"></script>
     <script src="./template_files/funciones.js"></script>
 
-    <!-- BEGIN MODAL INACTIVIDAD -->
-    <!-- END MODAL INACTIVIDAD-->
     <script src="js/main.js"></script>
+    <script src="js/facebook.js"></script>
 </body>
 </html>

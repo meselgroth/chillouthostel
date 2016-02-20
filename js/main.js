@@ -1,3 +1,29 @@
+function abrirRecepcion(sAction, iReserva, tipoLogin) {
+    if (tipoLogin == null) {
+        var tipoLogin = "";
+    }
+
+    $(".cuerpo").css("cursor", "wait");
+
+    if (tipoLogin == 'm') { //osea si es tipo mobile
+        $(".overlay_modal").css("display", "");
+        $("#close-button").click();
+    }
+
+    return false;
+}
+
+function cerrarLogin() {
+    jQuery("#login_container").hide();
+    jQuery("#login_containerm").hide();
+    $(".overlay_modal").css("display", "none");
+}
+
+$(document).ready(function () { //cambia el favicon de la web
+    jQuery('link[rel="shortcut icon"]').attr('href', '/favicon.ico');
+})
+
+
 var banderaEvent = 0;
 
 function cambiarSelect(campoA, campoB) {
@@ -23,14 +49,6 @@ $(document).ready(function () {
     $('#nochesDesdeC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
     $('#nochesHastaC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
 
-    //CAMBIOS DEL BOOKING 1 AL 2
-    $("#idHostelC").change(function () {
-        if (!sincronisando) {
-            sincronisando = true;
-            cambiarSelect("idHostelS", "idHostelC");
-            sincronisando = false;
-        }
-    });
     $("#nochesDesdeC").change(function () {
         if (!sincronisando) {
             sincronisando = true;
@@ -66,13 +84,6 @@ $(document).ready(function () {
     });
 
     //CAMBIOS DEL BOOKING 2 AL 1
-    $("#idHostelS").change(function () {
-        if (!sincronisando) {
-            sincronisando = true;
-            cambiarSelect("idHostelC", "idHostelS");
-            sincronisando = false;
-        }
-    });
     $("#nochesDesdeS").change(function () {
         if (!sincronisando) {
             sincronisando = true;

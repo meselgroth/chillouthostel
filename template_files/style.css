@@ -95,7 +95,7 @@ h4 {
    line-height: 0.8;
    font-size: 17px;
    color: #fffefe;
-   font-weight: 300;
+   font-weight: 400 !important;
    text-shadow: -1px 1px 1px #000;
 }
 h5 {
@@ -234,14 +234,13 @@ select {
 /* BEGIN REUTILIZABLE */
 #nav {
    top: -130px;
-   background: rgba(255, 255, 255, 0.6);
+   background: rgba(255, 255, 255, 0.7);
    position:fixed;
    width: 100% !important;
    margin: 0 !important;
    max-width: 100%;
    padding: 15px;
    z-index: 1000;
-   background: rgba(255, 255, 255, 0.7) !important;
    display: block;
    transition:all 0.3s ease-in-out;
    -webkit-transition:all 0.3s ease-in-out;
@@ -351,10 +350,10 @@ select {
 }
 #browse {
    width: 100%;
-   padding: 20px;
+   padding: 27px;
    background: white;
    height: 73px;
-   background: rgba(255,255,255,0.6);
+   background: rgba(255,255,255,0.5);
 }
 #select_ciudad {
    float: left;
@@ -430,22 +429,19 @@ select {
          box-shadow: none !important;
          outline: none !important;
       }
-      .input_fecha input[placeholder] {
-      color: #ffffff;
-      }
       .input_fecha input::-webkit-input-placeholder {
-      color: #ffffff;
+      color: #000000;
       }
    .input_fecha input:-moz-placeholder { /* Firefox 18- */
-      color: #ffffff;
+      color: #000000;
       opacity: 1;
       }
    .input_fecha input::-moz-placeholder {  /* Firefox 19+ */
-      color: #ffffff;
+      color: #000000;
       opacity: 1;
       }
    .input_fecha input:-ms-input-placeholder {  
-      color: #ffffff;  
+      color: #000000;  
    }
 #select_personas {
    float: left;
@@ -481,7 +477,7 @@ select {
    -ms-transition:all 0.3s ease-in-out;
 }
    .btn:hover {
-      background: #a6ca3e;
+      background: #056839;
       color: #fff;
    }
 #sesion {
@@ -504,13 +500,13 @@ select {
 #idiomas {
    float: right;
    clear: both;
-   margin: 23px 23px;
+   margin: 32px 0;
    padding: 0;
 }
    #idiomas li {
       float: left;
       list-style: none;
-      margin: 0 5px 0 0;
+      margin: 0 3px 0 0;
    }
       #idiomas li:last-child {
          margin: 0;
@@ -547,13 +543,15 @@ select {
    }
    #destinos ul {
       float: left;
-      margin: 2px 0 0;
+      margin: 0px;
       padding: 0;
    }
    #destinos li {
       float: left;
       list-style: none;
+      padding: 0 23px 0 0;
       margin: 0 23px 0 0;
+      border-right: 1px solid #fff;
    }
       #destinos li:last-child {
          margin: 0;
@@ -566,13 +564,13 @@ select {
          margin: 4px 23px 0 0;
       }
    #destinos a {
-      font-size: 14px;
+      font-size: 18px;
       color: #ffffff;
       display: block;
-      line-height: 1;
+      line-height: 0.8;
       float: left;
-      font-weight: 400;
-      text-shadow: -1px 1px 1px #000;
+      /* font-weight: 600; */
+      text-shadow: -1px 1px 1px #000000;
       text-decoration: none;
       transition:all 0.3s ease-in-out;
       -webkit-transition:all 0.3s ease-in-out;
@@ -582,13 +580,13 @@ select {
       cursor:pointer;
    }
       #destinos a:hover {
-         color: #a6ca3e;
+         color: darkblue;
       }
 .destinoOption {
    position: absolute;
    left: 50%;
    margin: 0 0 0 -300px;
-   border-bottom: 2px solid #a6ca3e;
+   border-bottom: 2px solid darkblue;
    display: none;
    bottom: 60px;
    -ms-bottom: 100px;
@@ -627,7 +625,7 @@ select {
    margin: 0 0 0 -65px;
 }
 #destinoOption_d {
-   margin: 0 0 0 115px;
+   margin: 0 0 0 292px;
 }
 #destinoOption_e {
    margin: 0 0 0 130px;
@@ -675,7 +673,7 @@ select {
    height: 0;
    border-left: 10px solid transparent;
    border-right: 10px solid transparent;
-   border-top: 10px solid #a6ca3e;
+   border-top: 10px solid darkblue;
    position: absolute;
    bottom: -12px;
    left: 64px;
@@ -1213,12 +1211,42 @@ img #logo_chillouthostel {
 }
 
 img.logo {
-    width: 225px;
-    /* height: 97px; */
-    margin-left: -10px;
+    width: 204px;
+    margin: 9px 6px;
 }
 
 .bg-transp {
     /* background: rgba(11, 118, 246,0.6); */
     border-radius: 22px;
+}
+
+.color-db {
+    color: darkblue;
+}
+
+#destinos {
+    height: 100%;
+    background: #000000;
+    background: rgba(0,0,0, 0.4);
+    padding: 20px 0;
+}
+
+/*--map start here--*/
+.map {
+  background: #F2F2F2;
+}
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+/*--map end here--*/
+
+.overlay {
+    background: transparent;
+    position: relative;
+    /* width: 100%; */
+    height: 300px;/* your iframe height */
+    top:300px;/* your iframe height */
+    margin-top: -300px;/* your iframe height */
 }
