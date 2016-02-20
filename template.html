@@ -116,7 +116,7 @@
                                 <select id="cantPersonasC" class="demo-default selectized" placeholder="INVITADOS" readonly="" tabindex="-1" style="display: none;"><option value="1" selected="selected">1</option></select><div class="selectize-control demo-default single"><div class="selectize-input items full has-options has-items"><div data-value="1" class="item">1</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single demo-default" style="display: none; width: 100px; top: 33px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
                             </div>
                             <!-- END SELECT -->
-                            <a onclick="enviarBookingHome(&#39;C&#39;)" style="cursor:pointer;" class="btn">SEARCH</a>
+                            <a onclick="enviarBookingHome('C')" style="cursor:pointer;" class="btn">SEARCH</a>
 
                         </div>
                     </div>
@@ -148,8 +148,6 @@
                     <div class="menu-wrap">
                         <nav class="menu">
                             <div class="icon-list">
-                                <div class="LoginAjax">
-                                </div> <!--MENU DE USUARIO-->
                                 <a href="https://chillouthostelboracay.com/">Home</a>
                                 <ul id="idiomas">
                                     <li>
@@ -162,8 +160,6 @@
                                         <a href="https://chillouthostelboracay.com/it/">it</a>
                                     </li>
                                 </ul>
-                                <a style="cursor:pointer;" class="visible-lg visible-md iniciar-sesion-login" onclick="return abrirRecepcion();">Log in</a>
-                                <a style="cursor:pointer;" class="visible-xs visible-sm iniciar-sesion-login" onclick="return abrirRecepcion(&#39;&#39;,&#39;&#39;,&#39;m&#39;);">Log in</a>
                                 <a href="https://chillouthostelboracay.com/en/component/chillouthostel?controller=grupos&amp;tmpl=webAnterior">Groups</a>
                                 <a href="https://chillouthostelboracay.com/en/component/chillouthostel/?controller=formcontacto&amp;tmpl=links">Customer service</a>
                                 <a href="https://chillouthostelboracay.com/en/component/chillouthostel/?controller=contacto&amp;tmpl=links">Contact</a>
@@ -207,7 +203,7 @@
                                 <span class="glyphicon glyphicon-user color-db fs-19"></span>
                             </div>
                             <select id="cantPersonasS" class="demo-default hidden-xs hidden-sm cantPersonasS selectized" placeholder="INVITADOS" readonly="" tabindex="-1" style="display: none;"><option value="1" selected="selected">1</option></select><div class="selectize-control demo-default hidden-xs hidden-sm cantPersonasS single"><div class="selectize-input items full has-options has-items"><div data-value="1" class="item">1</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single demo-default hidden-xs hidden-sm cantPersonasS" style="display: none; width: 100px; top: 33px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
-                            <select class="visible-xs visible-sm" id="cantPersonasMobileS" onchange="cambiarSelect(&#39;cantPersonasS&#39;,&#39;cantPersonasMobileS&#39;)" style="background:none;border:1px solid #8d8e8f;height:33px;width:100%;padding:5px 10px 5px 32px;font-size:14px;color:#ffffff;">
+                            <select class="visible-xs visible-sm" id="cantPersonasMobileS" onchange="cambiarSelect('cantPersonasS','cantPersonasMobileS')" style="background:none;border:1px solid #8d8e8f;height:33px;width:100%;padding:5px 10px 5px 32px;font-size:14px;color:#ffffff;">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -224,7 +220,7 @@
                             </select>
                         </div>
                         <!-- END SELECT -->
-                        <a onclick="enviarBookingHome(&#39;S&#39;)" class="btn" style="cursor:pointer;">SEARCH</a>
+                        <a onclick="enviarBookingHome('S')" class="btn" style="cursor:pointer;">SEARCH</a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-3 col-lg-1 responsiveOffArt">
@@ -318,10 +314,9 @@
         </div>
         <!-- END CAROUSEL -->
     </header>
-    <section id="social">
-        <div class="container">
+        <div id="social" class="container bg-boats">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="col-xs-12 col-sm-6 col-lg-4 col-lg-offset-1">
                     <div id="fb-root"></div>
                     <div class="fb-page"
                          data-href="https://www.facebook.com/CSIBoracay"
@@ -334,7 +329,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-lg-8">
+                <div class="col-xs-12 col-sm-6 col-lg-7">
                     <div id="TA_selfserveprop820" class="TA_selfserveprop">
                         <ul id="kfJgPAO" class="TA_links XhLtiy">
                             <li id="3hWR3dBW" class="4H3mwSW9n">
@@ -347,7 +342,6 @@
                 </div>
             </div>
         </div>
-    </section>
     <!-- END DESTINOS -->
     <!-- BEGIN VIDEO -->
     <section id="lifenow" class="responsiveOffArt">
@@ -375,182 +369,43 @@
         <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfx52nz08pTMRWxWXgwMRPUk&key=AIzaSyC6re0jcA5IBTTm71PlM-JwlNWy4ktmv1w"> </iframe>
     </div>
 
-    <!-- BEGIN INFO -->
-    <section id="sectionIcon" class="responsiveOffArt">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <div class="icon">
-                        <img src="./template_files/icon_life_01.svg">
-                    </div>
-                    <div class="data">
-                        <h1>We are the leading chain of Hostels in Latin America</h1>
-                        <p>Travels relaxed. We are at your disposal<br>before, during and after your trip.</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <div class="icon">
-                        <img src="./template_files/icon_life_02.svg">
-                    </div>
-                    <div class="data">
-                        <h1>Quick sale at the best<br>price</h1>
-                        <p>Book without registration and with the lowest rate.</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <div class="icon">
-                        <img src="./template_files/icon_life_03.svg">
-                    </div>
-                    <div class="data">
-                        <h1>Protect Your Money<br><br></h1>
-                        <p>Your personal information is 100% protected by international safety standards.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END INFO -->
-    <!-- BEGIN FOOTER -->
     <footer>
-        <div id="grayBox">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-lg-12">
-                        <nav>
-                            <ul style="height:20px;">
-                                <li>
-                                    <a target="_blank" href="https://chillouthostelboracay.com/en/component/chillouthostel?controller=grupos&amp;tmpl=webAnterior">Travel in group</a>
-                                </li>
-                                <li class="circle"></li>
-                                <li>
-                                    <a href="https://chillouthostelboracay.com/en?option=com_chillouthostel&amp;controller=formcontacto&amp;tmpl=links">Customer service</a>
-                                </li>
-                                <li class="circle"></li>
-                                <li>
-                                    <a href="https://chillouthostelboracay.com/en?option=com_chillouthostel&amp;controller=contacto">Contact</a>
-                                </li>
-                                <li class="circle"></li>
-                                <li>
-                                    <a href="https://chillouthostelboracay.com/en?option=com_chillouthostel&amp;controller=contacto&amp;task=trabajaconnosotros&amp;tmpl=links">Work with us</a>
-                                </li>
-                                <li class="circle"></li>
-                                <li>
-                                    <a href="https://chillouthostelboracay.com/en?option=com_chillouthostel&amp;controller=contacto&amp;task=misteryShopper&amp;tmpl=links">Mystery Shopper</a>
-                                </li>
-                                <!--
-                                <li class="circle"></li>
-                                <li>
-                                   <a href="/en/component/chillouthostel/?controller=fidelizacion&task=queEsViajar" id="logoViajar">
-                                      <img src="https://chillouthostelboracay.com/templates/chillouthostel_site2015/img/logos/logo_viajar.png">
-                                   </a>
-                                </li>
-                                -->
-                            </ul>
-                        </nav>
-                        <nav id="responsiveNav">
-                            <ul>
-                                <li>
-                                    <a target="_blank" href="https://chillouthostelboracay.com/es/component/chillouthostel?controller=grupos&amp;tmpl=reserva">Travel in group</a>
-                                </li>
-                                <li class="circle"></li>
-                                <li>
-                                    <a href="https://chillouthostelboracay.com/en?option=com_chillouthostel&amp;controller=formcontacto&amp;tmpl=links">Customer service</a>
-                                </li>
-                                <li class="circle"></li>
-                                <li>
-                                    <a href="https://chillouthostelboracay.com/en?option=com_chillouthostel&amp;controller=contacto&amp;tmpl=links">Contact</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="https://chillouthostelboracay.com/en?option=com_chillouthostel&amp;controller=contacto&amp;task=trabajaconnosotros&amp;tmpl=links">Work with us</a>
-                                </li>
-                                <li class="circle"></li>
-                                <li>
-                                    <a href="https://chillouthostelboracay.com/en?option=com_chillouthostel&amp;controller=contacto&amp;task=misteryShopper&amp;tmpl=links">Mistery Shopper</a>
-                                </li>
-                            </ul>
-                            <!--
-                            <ul>
-                               <li>
-                                  <a href="/en/component/chillouthostel/?controller=fidelizacion&task=queEsViajar" id="logoViajar">
-                                     <img src="https://chillouthostelboracay.com/templates/chillouthostel_site2015/img/logos/logo_viajar.png">
-                                  </a>
-                               </li>
-                            </ul>
-                            -->
-                        </nav>
-                        <a href="http://www.franquicias.chillouthostelboracay.com/">
-                            <div id="franqicia">
-                                <p>Do you want to open the next franchise</p>
-                                <div class="icon"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="container">
             <div class="row">
-                <div class="separadorFooter"></div>
-                <div class="col-xs-12 col-sm-6 col-lg-5">
+                <div class="separator_footer"></div>
+                <div class="col-xs-12 col-sm-6 col-lg-5 col-lg-offset-1">
                     <jdoc:include type="modules" name="user7">
                         <div class="responsiveFooterOff">
-                            <h2>Chill Out IN BRAZIL</h2>
-                            <p>
-                                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/34-bonito.html">Hostel in Bonito</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/11-buzios.html">Hostel in Buzios</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/40-suites-curitiba.html">Hostel in Curitiba</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/19-hostel-florianopolis.html">Hostel in Florianópolis</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/38-hostel-fortaleza.html">Hostel in Fortaleza</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/37-hostel-foz-do-iguacu.html">Hostel in Foz do Iguaçu</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/5-hostel-ilha-grande.html">Hostel in Ilha Grande</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/20-hostel-itacare.html">Hostel in Itacaré</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/36-hostel-joao-pessoa.html">Hostel in João Pessoa</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/34-hostel-maresias.html">Hostel in Maresias</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/18-hostel-morro-de-sao-paulo.html">Hostel in Morro São Paulo</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/26-hostel-natal.html">Hostel in Natal</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/14-paraty.html">Hostel in Paraty</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/32-hostel-porto-de-galinhas.html">Hostel in Porto de Galinhas</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/12-rio-de-janeiro.html">Hostel in Rio de Janeiro</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/11-hostel-salvador.html">Hostel in Salvador</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/30-suites-sao-paulo.html">Hostel in São Paulo</a>
-                            </p>
-                            <h2>Chill Out IN ARGENTINA</h2>
-                            <p>
-                                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/23-hostel-mar-del-plata.html">Hostel in Mar del Plata</a>
-                            </p>
-                            <h2>Chill Out IN URUGUAY</h2>
-                            <p>
-                                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/31-hostel-colonia.html">Hostel in Colonia del Sacramento</a> | <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/7-hostel-montevideo.html">Hostel in Montevideo</a>
-                            </p>
-                            <h2>Chill Out IN CHILE</h2>
-                            <p>
-                                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/9-hostel-santiago.html">Hostel in Santiago</a>
-                            </p>
-                            <h2>Chill Out IN PERU</h2>
-                            <p>
-                                <a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/16-hostel-lima.html">Hostel in Lima</a>
-                            </p>
+                            <a href="/"><img src="images/logo.png" alt="Chill Out Logo" class="logofooter" /></a>
+                            <h1>GET IN TOUCH</h1>
+                            <ul>
+                                <li>Chill Out Hostel</li>
+                                <li>Zone 5-A, Bulabog St.</li>
+                                <li>(near Iglesia Ni Cristo Church)</li>
+                                <li>Brangay Balabag, Boracay Island</li>
+                                <li>Malay, Aklan</li>
+                                <li>+63 (036) 288-9029</li>
+                            </ul>
                         </div>
                         <div class="responsiveFooterOn">
-                            <a class="btnTittle inactive" id="btnBra">Chill Out IN BRAZIL</a>
+                            <a class="btnTittle inactive" id="btnBra">Chill Out Hostel</a>
+                            <img src="images/logo.png" alt="Chill Out Logo" />
                             <div id="infoBra">
-                                <div><a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/34-bonito.html">Bonito</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/11-buzios.html">Buzios</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/40-suites-curitiba.html">Curitiba</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/19-hostel-florianopolis.html">Florianópolis</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/38-hostel-fortaleza.html">Fortaleza</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/37-hostel-foz-do-iguacu.html">Foz do Iguaçu</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/5-hostel-ilha-grande.html">Ilha Grande</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/20-hostel-itacare.html">Itacaré</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/36-hostel-joao-pessoa.html">João Pessoa</a></div><div><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/34-hostel-maresias.html">Maresias</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/18-hostel-morro-de-sao-paulo.html">Morro São Paulo</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/26-hostel-natal.html">Natal</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/14-paraty.html">Paraty</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/32-hostel-porto-de-galinhas.html">Porto de Galinhas</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/multidestino/display/12-rio-de-janeiro.html">Rio de Janeiro</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/11-hostel-salvador.html">Salvador</a><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/30-suites-sao-paulo.html">São Paulo</a></div>
-                            </div>
-                            <a class="btnTittle inactive" id="btnArg">Chill Out IN ARGENTINA</a>
-                            <div id="infoArg">
-                                <div><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/23-hostel-mar-del-plata.html">Mar del Plata</a></div><div></div>
-                            </div>
-                            <a class="btnTittle inactive" id="btnUru">Chill Out IN URUGUAY</a>
-                            <div id="infoUru">
-                                <div><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/31-hostel-colonia.html">Colonia del Sacramento</a></div><div><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/7-hostel-montevideo.html">Montevideo</a></div>
-                            </div>
-                            <a class="btnTittle inactive" id="btnChi">Chill Out IN CHILE</a>
-                            <div id="infoChi">
-                                <div><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/9-hostel-santiago.html">Santiago</a></div><div></div>
-                            </div>
-                            <a class="btnTittle inactive" id="btnPer">Chill Out IN PERU</a>
-                            <div id="infoPer">
-                                <div><a href="https://chillouthostelboracay.com/en/component/chillouthostel/hostels/16-hostel-lima.html">Lima</a></div><div></div>
+                                <a href="/"><img src="images/logo.png" alt="Chill Out Logo" /></a>
                             </div>
                         </div>
                     </jdoc:include>
                 </div>
 
-
-
-                <div class="col-xs-12 col-sm-6 col-lg-4 responsiveOffArt" style="text-align: left;">
-                    <h1>OUR LATEST BLOG</h1>
+                <div class="col-xs-12 col-sm-6 col-lg-3 responsiveOffArt" style="text-align: left;">
+                    <h1>OUR BLOGS</h1>
                     <a href="http://blog.chillouthostelboracay.com/" id="btnBlog">Blog.chillouthostelboracay.com</a>
+                    <p>Follow our blog on latest updates as we continously improve your home :)</p>
 
-                    <a style="cursor:pointer;text-decoration:none;" target="_blank" href="http://blog.chillouthostelboracay.com/en/la-bomba-de-tiempo-every-monday-in-the-konex/"><h6>La Bomba de Tiempo, every Monday in the Konex</h6></a> <p class="noMarginBottom"><a style="cursor:pointer;text-decoration:none;" target="_blank" href="http://blog.chillouthostelboracay.com/en/la-bomba-de-tiempo-every-monday-in-the-konex/"></a></p><p><a style="cursor:pointer;text-decoration:none;" target="_blank" href="http://blog.chillouthostelboracay.com/en/la-bomba-de-tiempo-every-monday-in-the-konex/">If you are visiting Buenos Aires and your feet are constantly moving every time you hear drums you can not leave without seeing this unique show: La Bomba de Tiempo. It is a group formed by leading...</a></p>
                     <div class="line"></div>
-                    <a style="cursor:pointer;text-decoration:none;" target="_blank" href="http://blog.chillouthostelboracay.com/en/el-calafate-is-a-picturesque-village-full-of-peace-and-greenery/"><h6>El Calafate is a picturesque village full of peace and g</h6></a> <p class="noMarginBottom"><a style="cursor:pointer;text-decoration:none;" target="_blank" href="http://blog.chillouthostelboracay.com/en/el-calafate-is-a-picturesque-village-full-of-peace-and-greenery/"></a></p><p><a style="cursor:pointer;text-decoration:none;" target="_blank" href="http://blog.chillouthostelboracay.com/en/el-calafate-is-a-picturesque-village-full-of-peace-and-greenery/">El Calafate is located 320 km from Rio Gallegos (capital of the province of Santa Cruz) and on the south bank of Lake Argentino in the Andean Mountain Range. El Calafate is a picturesque village fu...</a></p>
+                    <a href="http://blog.chillouthostelboracay.com/" id="btnBlog">
+                        Boracay on a budget
+                    </a> <p>Learn how to enjoy the best of boracay on a budget</p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-lg-3">
                     <div class="line responsiveOn"></div>
@@ -558,12 +413,12 @@
                         <h1>FOLLOW US:</h1>
                         <ul>
                             <li>
-                                <a target="_blank" href="https://es-la.facebook.com/chillouthostel">
+                                <a target="_blank" href="https://facebook.com/chillouthostel">
                                     <img height="37px" width="50px" src="./template_files/icon_facebook.svg" alt="Facebook">
                                 </a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://instagram.com/che_lagarto_hostels/">
+                                <a target="_blank" href="https://instagram.com/chillouthostel/">
                                     <img height="37px" width="50px" src="./template_files/icon_instagram.svg" alt="Instagram">
                                 </a>
                             </li>
@@ -585,7 +440,7 @@ If another company offers a lower publicly available rate, we will match that ra
                         </script>
                     </aside2>
                 </div>
-                <div class="separadorFooter"></div>
+                <div class="separator_footer separadorFooter"></div>
             </div>
         </div>
         <div class="whiteBox">
@@ -593,17 +448,7 @@ If another company offers a lower publicly available rate, we will match that ra
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-lg-8" style="font-size: 11px;">
-                        <span>© 2015 chillouthostel Hostels - </span><a href="https://chillouthostelboracay.com/en/#" class="color_base" onclick="jQuery(&#39;html, body&#39;).animate({ scrollTop: 0 }, 500); return abrirRecepcion();"><b>Mi Chill Out</b></a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-4">
-                        <a href="https://www.sinergiasoluciones.com.ar/" target="_blank" id="logoSinergia" class="hidden-xs hidden-sm">
-                            <img style="padding-left:30px;" src="./template_files/sinergia.png">
-                        </a>
-                        <div style="margin:0 auto;width:180px;">
-                            <a href="https://www.thawte.com/" id="logoSecurity" style="margin:0px !important;float:none !important;" target="_blank">
-                                <img style="padding-left:20px;" src="./template_files/seciruty.png">
-                            </a>
-                        </div>
+                        <span>© 2015 Chill Out Hostel - </span><a href="https://chillouthostelboracay.com/en/#" class="color_base" onclick="jQuery('html, body').animate({ scrollTop: 0 }, 500); return abrirRecepcion();"><b>Chill Out</b>  | Built by Michael Eselgroth</a>
                     </div>
                 </div>
             </div>

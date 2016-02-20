@@ -21,6 +21,13 @@ function cerrarLogin() {
 
 $(document).ready(function () { //cambia el favicon de la web
     jQuery('link[rel="shortcut icon"]').attr('href', '/favicon.ico');
+    
+    //Smooth Scrolling
+    $(".scroll").click(function (event) {
+        event.preventDefault();
+        console.log($(this).show());
+        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+    });
 })
 
 
