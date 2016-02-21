@@ -48,7 +48,6 @@ footer {
       clear: both;
       width: 100%;
       font-weight: 400;
-      background: url(../img/iconos/icon_circle.png) left 6px no-repeat;
       padding: 0 0 0 14px;
    }
    footer p {
@@ -173,7 +172,7 @@ aside {
    aside li {
       list-style: none;
       float: left;
-      margin: 0 0 0 10px;
+      margin: 12px 0 0 1px;
    }
    aside a {
       transition:all 0.3s ease-in-out;
@@ -223,7 +222,6 @@ select {
    padding: 5px 10px 5px 32px;
    text-overflow: ellipsis;
    white-space: nowrap;
-   background: url(../img/iconos/select_arrow.png) 96% 13px no-repeat !important;
    width: 100%;
    font-size: 14px;
    color: #ffffff;
@@ -387,7 +385,6 @@ select {
          width: 100%;
       border-radius: 0;
       padding: 5px 10px 5px 32px !important;
-      background: url(../img/iconos/select_arrow.png) 96% 13px no-repeat !important;
       font-size: 14px;
       color: #ffffff;
       font-weight: 300;
@@ -1247,7 +1244,7 @@ img.logo {
     margin-top: -300px;/* your iframe height */
 }
 .bg-boats {
-    background-image: url(/images/bgboats.jpg);
+    background-image: url(../images/bgboats.jpg);
     padding: 50px;
     background-size: cover;
 }
@@ -1267,4 +1264,8 @@ img.logofooter {
 
 #findus {
     margin: 0 0 -3px;
+}
+
+img.sociallogo {
+    height: 32px;
 }
