@@ -26,7 +26,7 @@ $(document).ready(function () { //cambia el favicon de la web
     $(".scroll").click(function (event) {
         event.preventDefault();
         console.log($(this).show());
-        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+        $('html,body').animate({ scrollTop: $(this.hash).offset().top - 118 }, 1000);
     });
 })
 

@@ -356,6 +356,10 @@
 	#nav,
 	#destinos {
 		display: block;
+		margin: 0;
+	}
+	#destinos a {
+    font-size: 16px;
 	}
 	#select_ciudad {
 	   	float: left;
