@@ -193,20 +193,6 @@
       	font-weight: 700;
       	line-height: 0.8;
     }
-	#sectionIcon .icon {
-	    float: none;
-	    margin: auto;
-	}
-	#sectionIcon .data {
-  		float: left;
-  		width: 100%;
-	}
-	#sectionIcon h1 {
-      	text-align: center;
-   	}
-   #sectionIcon p {
-      	text-align: center;
-   	}
    	aside {
    		margin: 30px 0 0;
    		overflow: hidden;
@@ -465,13 +451,7 @@
 	.banner_667px {
 		height: 680px;
 	}
-	#sectionIcon .col-lg-4:nth-child(2) h1 {
-      	margin: 10px 0 10px;
-   	}
-   	#sectionIcon .col-lg-4:nth-child(3) h1 {
-      	margin: 10px 0 10px;
-   	}
-   	.responsiveFooterOff {
+	.responsiveFooterOff {
    		display: block;
    	}
    	.responsiveFooterOn {
