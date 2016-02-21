@@ -69,7 +69,7 @@ footer {
             color: #7e7e7e;
          }
 h1 {
-   margin: 38px 0 55px;
+   margin: 53px 0 55px;
    text-align: center;
    font-size: 51px;
    color: #a7a7a7;
@@ -459,7 +459,7 @@ select {
 .btn {
    float: left;
    width: 15%;
-   background: #de2739;
+   background: darkblue;
    font-size: 14px;
    color: #ffffff;
    font-weight: 300;
@@ -1004,7 +1004,7 @@ select {
    clear: both;
    float: left;
    width: 100%;
-   padding: 0 0 10px;
+   padding: 15px 0 15px;
 }
 #logoSecurity {
    margin: 0 35px 0 0;
@@ -1207,7 +1207,7 @@ img #logo_chillouthostel {
 }
 
 img.logo {
-    width: 204px;
+    width: 100%;
     margin: 9px 6px;
 }
 
