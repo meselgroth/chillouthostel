@@ -26,7 +26,6 @@ header {
 footer {
     background: #f2f2f2;
 }
-
     footer h1 {
         font-size: 20px;
         text-align: left;
@@ -36,7 +35,6 @@ footer {
         font-weight: 300;
         width: 100%;
     }
-
     footer h2 {
         font-size: 13px;
         color: #00008B;
@@ -89,15 +87,15 @@ h1 {
 h2 {
 }
 
-h3 {
-    margin: 0;
-    float: left;
-    line-height: 0.8;
-    font-size: 36px;
-    color: #ffffff;
-    font-weight: 400;
-    text-shadow: -1px 1px 1px #000;
-}
+    h3 {
+        font-size: 20px;
+        text-align: left;
+        color: #979797;
+        margin: 32px 0 14px;
+        line-height: 0.8;
+        font-weight: 300;
+        width: 100%;
+    }
 
 h4 {
     margin: 9px 0 0;
@@ -1358,7 +1356,7 @@ img.logo {
 .bg-boats {
     background-image: url(../images/bgboats.jpg);
     background-size: cover;
-    /* padding: 22px; */
+    padding: 0 15px 15px;
 }
 
 img.logofooter {
@@ -1396,12 +1394,6 @@ img.sociallogo {
      font-size:13px;
      font-weight:bold;
 }
-
-.contact-input{
-    background-color:black;
-}
-
-
 
 .contact {
   padding:5em 0em 5em 0em;
@@ -1531,15 +1523,93 @@ img.sociallogo {
 
 
 h2.social {
-    margin: 45px 0 51px;
+    margin: 45px 0 45px;
     font-weight: 300;
     line-height: 0.8;
+    text-align: center;
+    color: #00008B;
+    text-shadow: 0px 0px 1px #000;
+}
+h3.social {
+    /* color: rgb(255,255,255); */
+    /* text-shadow: -1px 1px 1px #000000; */
+    margin: 32px 0;
+}
+
+.bg-lightblue {background: rgb(252, 176, 64);}
+
+.socialbox {
+    background: rgba(255,255,255,.7);
+    padding: 1px 30px;
+}
+
+.rating {
+    /* text-align: right; */
+    /* display: block; */
+    float: right;
+}
+
+.blueshortline {
+    height: 2px;
+    width:100px;
+    margin-top:25px;
+    margin-bottom:25px;
+    background-color: #00008B;
     text-align: center;
 }
 
-h3.social {
-    /* margin: 45px 0 51px; */
-    font-weight: 300;
-    line-height: 0.8;
+.submit {padding: 15px 15px 35px;}
+
+.contact-main {
+    padding: 0 15px;
+}
+
+#contactus {
+}
+
+#tripadvisorlogo {
+    background: #002E63;
+    border-radius: 50%;
+}
+
+.socialbox {
+    font-size: 13px;
+}
+
+.submit a {
+    margin: 0 40%;
+}
+
+img.promoimg {
+    width: 90%;
+    border-radius: 10px;
+    float: right;
+    box-shadow: 2px 2px 5px #000;
+}
+
+.openingpromo h2 {
+    float: left;
+    position: absolute;
+    margin-left: 12%;
+}
+
+.openingpromo div {
+    float: right;
+    position: absolute;
     text-align: center;
+    width: 100%;
+    /* vertical-align: bottom; */
+    /* height: 100%; */
+    margin-top: 39%;
+}
+
+.openingpromo {
+    margin: 30px;
+    text-shadow: -1px 1px 1px rgb(252, 176, 64);
+    text-transform: uppercase;
+    /* width: 100%; */
+}
+
+.spacer {
+    margin: 30px;
 }

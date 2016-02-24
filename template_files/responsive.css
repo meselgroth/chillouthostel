@@ -160,11 +160,11 @@
    	.destinoOption {
    		opacity: 0;
    	}
-   	h3 {
-   		font-size: 30px;
-	}
 	h4 {
    		margin: 7px 0 0;
+	}
+	.openingpromo h2 {
+		font-size: 22px;
 	}
 }
 @media only screen and (max-width: 320px) {
@@ -305,9 +305,6 @@
    	#responsiveNav {
    		display: none;
    	}
-   	h3 {
-   		font-size: 36px;
-	}
 	h4 {
    		margin: 9px 0 0;
 	}
@@ -322,6 +319,9 @@
 	}
 	.btn {
 	   	width: 30%;
+	}
+	.openingpromo h2 {
+		font-size: 30px;
 	}
 }
 @media only screen and (min-width: 1024px) {
