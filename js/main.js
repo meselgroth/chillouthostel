@@ -51,80 +51,84 @@ $(document).ready(function () {
         }, 250));
     });
 
-    $('#nochesDesdeS').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
-    $('#nochesHastaS').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
-    $('#nochesDesdeC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
-    $('#nochesHastaC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
-
-    $("#nochesDesdeC").change(function () {
-        if (!sincronisando) {
-            sincronisando = true;
-            $("#nochesDesdeS").val($("#nochesDesdeC").val());
-            sincronisando = false;
-
-            var fechaDesde = $('#nochesDesdeC').datepicker('getDate');
-            fechaDesde.setTime(fechaDesde.getTime() + ((1000 * 3600 * 24) * 1));
-
-            $('#nochesHastaC').datepicker('setStartDate', fechaDesde);
-            if ($('#nochesHastaC').datepicker('getDate') == null) {
-                $('#nochesHastaC').datepicker('setDate', fechaDesde);
-            }
-            $('#nochesHastaS').datepicker('setStartDate', fechaDesde);
-            if ($('#nochesHastaS').datepicker('getDate') == null) {
-                $('#nochesHastaS').datepicker('setDate', fechaDesde);
-            }
-        }
-    });
-    $("#nochesHastaC").change(function () {
-        if (!sincronisando) {
-            sincronisando = true;
-            $("#nochesHastaS").val($("#nochesHastaC").val());
-            sincronisando = false;
-        }
-    });
-    $("#cantPersonasC").change(function () {
-        if (!sincronisando) {
-            sincronisando = true;
-            cambiarSelect("cantPersonasS", "cantPersonasC");
-            sincronisando = false;
-        }
+    $('div[id=browse]').click(function () {
+        alert("Not yet working!");
     });
 
-    //CAMBIOS DEL BOOKING 2 AL 1
-    $("#nochesDesdeS").change(function () {
-        if (!sincronisando) {
-            sincronisando = true;
-            $("#nochesDesdeC").val($("#nochesDesdeS").val());
-            sincronisando = false;
+    //$('#nochesDesdeS').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
+    //$('#nochesHastaS').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
+    //$('#nochesDesdeC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
+    //$('#nochesHastaC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
 
-            var fechaDesde = $('#nochesDesdeS').datepicker('getDate');
-            fechaDesde.setTime(fechaDesde.getTime() + ((1000 * 3600 * 24) * 1));
+    //$("#nochesDesdeC").change(function () {
+    //    if (!sincronisando) {
+    //        sincronisando = true;
+    //        $("#nochesDesdeS").val($("#nochesDesdeC").val());
+    //        sincronisando = false;
 
-            $('#nochesHastaS').datepicker('setStartDate', fechaDesde);
-            if ($('#nochesHastaS').datepicker('getDate') == null) {
-                $('#nochesHastaS').datepicker('setDate', fechaDesde);
-            }
+    //        var fechaDesde = $('#nochesDesdeC').datepicker('getDate');
+    //        fechaDesde.setTime(fechaDesde.getTime() + ((1000 * 3600 * 24) * 1));
 
-            $('#nochesHastaC').datepicker('setStartDate', fechaDesde);
-            if ($('#nochesHastaC').datepicker('getDate') == null) {
-                $('#nochesHastaC').datepicker('setDate', fechaDesde);
-            }
-        }
-    });
-    $("#nochesHastaS").change(function () {
-        if (!sincronisando) {
-            sincronisando = true;
-            $("#nochesHastaC").val($("#nochesHastaS").val());
-            sincronisando = false;
-        }
-    });
-    $("#cantPersonasS").change(function () {
-        if (!sincronisando) {
-            sincronisando = true;
-            cambiarSelect("cantPersonasC", "cantPersonasS");
-            sincronisando = false;
-        }
-    });
+    //        $('#nochesHastaC').datepicker('setStartDate', fechaDesde);
+    //        if ($('#nochesHastaC').datepicker('getDate') == null) {
+    //            $('#nochesHastaC').datepicker('setDate', fechaDesde);
+    //        }
+    //        $('#nochesHastaS').datepicker('setStartDate', fechaDesde);
+    //        if ($('#nochesHastaS').datepicker('getDate') == null) {
+    //            $('#nochesHastaS').datepicker('setDate', fechaDesde);
+    //        }
+    //    }
+    //});
+    //$("#nochesHastaC").change(function () {
+    //    if (!sincronisando) {
+    //        sincronisando = true;
+    //        $("#nochesHastaS").val($("#nochesHastaC").val());
+    //        sincronisando = false;
+    //    }
+    //});
+    //$("#cantPersonasC").change(function () {
+    //    if (!sincronisando) {
+    //        sincronisando = true;
+    //        cambiarSelect("cantPersonasS", "cantPersonasC");
+    //        sincronisando = false;
+    //    }
+    //});
+
+    ////CAMBIOS DEL BOOKING 2 AL 1
+    //$("#nochesDesdeS").change(function () {
+    //    if (!sincronisando) {
+    //        sincronisando = true;
+    //        $("#nochesDesdeC").val($("#nochesDesdeS").val());
+    //        sincronisando = false;
+
+    //        var fechaDesde = $('#nochesDesdeS').datepicker('getDate');
+    //        fechaDesde.setTime(fechaDesde.getTime() + ((1000 * 3600 * 24) * 1));
+
+    //        $('#nochesHastaS').datepicker('setStartDate', fechaDesde);
+    //        if ($('#nochesHastaS').datepicker('getDate') == null) {
+    //            $('#nochesHastaS').datepicker('setDate', fechaDesde);
+    //        }
+
+    //        $('#nochesHastaC').datepicker('setStartDate', fechaDesde);
+    //        if ($('#nochesHastaC').datepicker('getDate') == null) {
+    //            $('#nochesHastaC').datepicker('setDate', fechaDesde);
+    //        }
+    //    }
+    //});
+    //$("#nochesHastaS").change(function () {
+    //    if (!sincronisando) {
+    //        sincronisando = true;
+    //        $("#nochesHastaC").val($("#nochesHastaS").val());
+    //        sincronisando = false;
+    //    }
+    //});
+    //$("#cantPersonasS").change(function () {
+    //    if (!sincronisando) {
+    //        sincronisando = true;
+    //        cambiarSelect("cantPersonasC", "cantPersonasS");
+    //        sincronisando = false;
+    //    }
+    //});
 });
 
 function enviarBookingHome(form) {

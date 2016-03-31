@@ -90,11 +90,11 @@
                                 <select id="cantPersonasC" class="demo-default selectized" placeholder="INVITADOS" readonly="" tabindex="-1" style="display: none;"><option value="1" selected="selected">1</option></select><div class="selectize-control demo-default single"><div class="selectize-input items full has-options has-items"><div data-value="1" class="item">1</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single demo-default" style="display: none; width: 100px; top: 33px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
                             </div>
                             <!-- END SELECT -->
-                            <a onclick="enviarBookingHome('C')" style="cursor:pointer;" class="btn">SEARCH</a>
+                            <a  style="cursor:pointer;" class="btn">SEARCH</a> <!--onclick="enviarBookingHome('C')"-->
 
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-2 col-lg-1">
+                    <div class="col-xs-12 col-sm-2 col-lg-1" style="display: none">
                         <ul id="idiomas">
                             <li>
                                 <a href="https://chillouthostelboracay.com/">es</a>
@@ -123,7 +123,7 @@
                         <nav class="menu">
                             <div class="icon-list">
                                 <a href="https://chillouthostelboracay.com/">Home</a>
-                                <ul id="idiomas">
+                                <ul id="idiomas" style="display: none">
                                     <li>
                                         <a href="https://chillouthostelboracay.com/">es</a>
                                     </li>
@@ -135,13 +135,13 @@
                                     </li>
                                 </ul>
 
-                                <a class="scroll" href="#specialoffers">Special Offers</a>
+                                <!--<a class="scroll" href="#specialoffers">Special Offers</a>-->
                                 <a class="scroll" href="#findus">Find Us</a>
                                 <a class="scroll" href="#contactus">Contact Us</a>
-                                <a class="scroll" href="#gallery">Gallary</a>
-                                <a class="scroll" href="#social">Get Involved</a>
-                                <a class="scroll" href="#">Things To Do</a>
-                                <a class="scroll" href="#">Our Blog</a>
+                                <!--<a class="scroll" href="#gallery">Gallary</a>-->
+                                <!--<a class="scroll" href="#social">Get Involved</a>-->
+                                <!--<a class="scroll" href="#">Things To Do</a>-->
+                                <!--<a class="scroll" href="#">Our Blog</a>-->
                             </div>
                         </nav>
                         <button class="close-button" id="close-button">Close Menu</button>
@@ -195,10 +195,10 @@
                             </select>
                         </div>
                         <!-- END SELECT -->
-                        <a onclick="enviarBookingHome('S')" class="btn" style="cursor:pointer;">SEARCH</a>
+                        <a  class="btn" style="cursor:pointer;">SEARCH</a> <!--onclick="enviarBookingHome('S')"-->
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-1 col-lg-1 responsiveOffArt">
+                <div class="col-xs-12 col-sm-1 col-lg-1 responsiveOffArt" style="display: none">
                     <ul id="idiomas">
                         <li>
                             <a href="https://chillouthostelboracay.com/es/">es</a>
@@ -225,9 +225,9 @@
         <div class="container-fluid" id="destinos">
             <div>
                 <ul>
-                    <li>
+                    <!--<li>
                         <a id="destino_a" class="scroll" href="#specialoffers">SPECIAL OFFERS</a>
-                    </li>
+                    </li>-->
                     <li>
                         <a id="destino_a" class="scroll" href="#findus">FIND US</a>
                     </li>
@@ -236,17 +236,17 @@
                         <a id="destino_b" class="scroll" href="#contactus">CONTACT US</a>
                     </li>
 
-                    <li>
+                    <!--<li>
                         <a id="destino_d" class="scroll" href="#gallery">GALLARY</a>
-                    </li>
+                    </li>-->
 
-                    <li>
+                    <!--<li>
                         <a id="destino_e" class="scroll" href="#social">GET INVOLVED</a>
-                    </li>
+                    </li>-->
 
-                    <li>
+                    <!--<li>
                         <a id="destino_f" class="scroll" href="#">THINGS TO DO</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
@@ -289,7 +289,7 @@
         </div>
         <!-- END CAROUSEL -->
     </header>
-    <div class="container-fluid bg-lightblue" id="specialoffers">
+    <div class="container-fluid bg-lightblue" id="specialoffers" style="display: none">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="openingpromo">
@@ -301,7 +301,7 @@
                 </div>
             </div>
     </div>
-    <div id="social" class="container-fluid bg-boats">
+    <div id="social" class="container-fluid bg-boats" style="display: none">
         <div class="socialouter">
             <h2 class="social">What Others Say</h2>
 
@@ -392,10 +392,10 @@
 
     <div class="map">
         <div class="overlay" onclick="style.pointerEvents='none'"></div>
-        <iframe id="findus" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJfx52nz08pTMRWxWXgwMRPUk&key=AIzaSyC6re0jcA5IBTTm71PlM-JwlNWy4ktmv1w"> </iframe>
+        <iframe id="findus" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.11482078486!2d121.92441001434337!3d11.966551491520777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a53c3d927e1b3f%3A0x2775da41406a3e8d!2sBoracay+Bulabog+Rd%2C+Malay%2C+Aklan%2C+Philippines!5e0!3m2!1sen!2sus!4v1459429818134"> </iframe>
     </div>
 
-    <div class="container" id="contactus">
+    <div class="container" id="" style="display: none">
         <div class="contact-main">
             <div class="contact-top">
                 <h2 class="social">Contact Us</h2>
@@ -423,7 +423,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer id="contactus">
         <div class="container">
             <div class="row">
                 <div class="separator_footer"></div>
@@ -459,7 +459,7 @@
                     </jdoc:include>
                 </div>
 
-                <div class="col-xs-12 col-sm-6 col-lg-3 responsiveOffArt" style="text-align: left;">
+                <div class="col-xs-12 col-sm-6 col-lg-3 responsiveOffArt" style="text-align: left; display: none">
                     <h3>OUR BLOGS</h3>
                     <a href="http://blog.chillouthostelboracay.com/" id="btnBlog">Blog.chillouthostelboracay.com</a>
                     <p>Follow our blog on latest updates as we continously improve your home :)</p>

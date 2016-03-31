@@ -627,6 +627,7 @@ select {
 
         #destinos li:last-child {
             margin: 0;
+            border: none;
         }
 
         #destinos li.circle {
