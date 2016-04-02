@@ -1,466 +1,588 @@
 /*--- BEGIN MEDIA QUERY ---*/
 @media only screen and (min-width: 240px) {
-	#nav,
-	#destinos {
-		display: none;
-	}
-	.responsiveOn {
-   		display: block;
-   	}
-   	.responsiveOff,
-   	.responsiveOffArt {
-   		display: none;
-   	}
-   	header {
-   		background: url(../img/bg/bg_responsive.jpg) left top no-repeat;
-   		background-size: cover;
-   		-webkit-background-size: cover;
-   		-moz-background-size: cover;
-   		-o-background-size: cover;
-   		-ms-background-size: cover;
-   		height: 475px;
-   		overflow: hidden;
-   	}
-   	header h1 {
-   		display: none;
-   	}
-   	#carousel {
-   		display: none;
-   	}
-   	#logo_chelagarto {
-   		margin: 0 0 0 15px;
-	}
-	#select_ciudad {
-	   	float: left;
-	   	display: block;
-	   	width: 98%;
-	   	margin: 0 2% 2% 0;
-	   	position: relative;
-	   	overflow: visible;
-	}
-	.input_fecha {
-	   	float: left;
-	   	overflow: hidden;
-	   	display: block;
-	   	width: 48%;
-	   	margin: 0 2% 2% 0;
-	}
+    #nav,
+    #destinos {
+        display: none;
+    }
 
-.input_fecha_logo {
-    width: 230px;
-}
-	#select_personas {
-	   	float: left;
-	   	overflow: visible;
-	   	display: block;
-	   	width: 48%;
-	   	margin: 0 2% 0 0;
-	   	position: relative;
-	}
-	.btn {
-	   	float: left;
-	   	width: 48%;
-	   	font-size: 14px;
-	   	color: #ffffff;
-	   	font-weight: 300;
-	   	text-align: center;
-	   	padding: 7px 0;
-	   	height: 33px;
-	   	transition:all 0.3s ease-in-out;
-	   	-webkit-transition:all 0.3s ease-in-out;
-	   	-moz-transition:all 0.3s ease-in-out;
-	   	-o-transition:all 0.3s ease-in-out;
-	   	-ms-transition:all 0.3s ease-in-out;
-	}
-	#browse {
-		margin: 160px 15px 0;
-		width: calc(100% - 30px);
-		height: 126px;
-	}
-	#section_destinos,
-	footer .container {
-		margin: 0 15px;
-	}
-	aside {
-   		margin: 0;
-   		float: left;
-   		border-right: 1px solid #a4a4a4;
-   		padding: 0;
-   		clear: both;
-   		width: 48%;
-	}
-		aside h1 {
-			margin: 10px 0 25px;
-		}
-		aside ul {
-			clear: both;
-		}
-	h5 {
-   		float: left;
-   		margin: 0 0 15px;
-   		width: 52%;
-   		text-align: center;
-	}
-        aside2 {
-   		margin: 0;
-   		float: left;
-   		border-right: 1px solid #a4a4a4;
-   		padding: 0;
-   		clear: both;
-   		width: 48%;
-	}
-	#logoViajarBig {
-   		display: block;
-   		float: left;
-   		clear: none;
-   		margin: 0;
-   		width: 52%;
-   		text-align: center;
-	}
-	#legales {
-		padding: 0 0 15px 30px;
-	}
-	#logoSinergia {
-		margin: 0 26px 0 0;
-	}
-	#logoViajar {
-		margin: 0;
-	}
-	nav a {
-      	line-height: 2;
-   	}
-   	nav li.circle {
+    .responsiveOn {
+        display: block;
+    }
+
+    .responsiveOff,
+    .responsiveOffArt {
+        display: none;
+    }
+
+    header {
+        background: url(../img/bg/bg_responsive.jpg) left top no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        height: 475px;
+        overflow: hidden;
+    }
+
+        header h1 {
+            display: none;
+        }
+
+    #carousel {
+        display: none;
+    }
+
+    #logo_chelagarto {
+        margin: 0 0 0 15px;
+    }
+
+    #select_ciudad {
+        float: left;
+        display: block;
+        width: 98%;
+        margin: 0 2% 2% 0;
+        position: relative;
+        overflow: visible;
+    }
+
+    .input_fecha {
+        float: left;
+        overflow: hidden;
+        display: block;
+        width: 48%;
+        margin: 0 2% 2% 0;
+    }
+
+    img.logo {
+    }
+
+    .input_fecha_logo {
+        width: 100%;
+    }
+
+    #select_personas {
+        float: left;
+        overflow: visible;
+        display: block;
+        width: 48%;
+        margin: 0 2% 0 0;
+        position: relative;
+    }
+
+    .btn {
+        float: left;
+        width: 48%;
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 300;
+        text-align: center;
+        padding: 7px 0;
+        height: 33px;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+    }
+
+    #browse {
+        margin: 73px 15px 0;
+        width: calc(100% - 30px);
+        height: 205px;
+    }
+
+    #section_destinos,
+    footer .container {
+        margin: 0 15px;
+    }
+
+    aside {
+        margin: 0;
+        float: left;
+        border-right: 1px solid #a4a4a4;
+        padding: 0;
+        clear: both;
+        width: 48%;
+    }
+
+        aside h1 {
+            margin: 10px 0 25px;
+        }
+
+        aside ul {
+            clear: both;
+        }
+
+    h5 {
+        float: left;
+        margin: 0 0 15px;
+        width: 52%;
+        text-align: center;
+    }
+
+    aside2 {
+        margin: 0;
+        float: left;
+        border-right: 1px solid #a4a4a4;
+        padding: 0;
+        clear: both;
+        width: 48%;
+    }
+
+    #logoViajarBig {
+        display: block;
+        float: left;
+        clear: none;
+        margin: 0;
+        width: 52%;
+        text-align: center;
+    }
+
+    #legales {
+        padding: 0 0 15px 30px;
+    }
+
+    #logoSinergia {
+        margin: 0 26px 0 0;
+    }
+
+    #logoViajar {
+        margin: 0;
+    }
+
+    nav a {
+        line-height: 2;
+    }
+
+    nav li.circle {
         margin: 14px 10px 0 0;
     }
+
     #franqicia {
-    	margin: 0 40px 0 0;
-	}
-	#grayBox {
-		margin: 50px 0 0;
-	}
-	.menu-wrap,
-   	.menu-button {
-   		display: block;
-   	}
-   	.responsiveFooterOff {
-   		display: none;
-   	}
-   	.responsiveFooterOn {
-   		display: block;
-   	}
-   	nav {
-   		display: none;
-   	}
-   	nav.menu {
-   		display: block;
-   	}
-   	#responsiveNav {
-   		display: block;
-   	}
-   	.destinoOption {
-   		opacity: 0;
-   	}
-	h4 {
-   		margin: 7px 0 0;
-	}
-	.openingpromo h2 {
-		font-size: 22px;
-	}
+        margin: 0 40px 0 0;
+    }
+
+    #grayBox {
+        margin: 50px 0 0;
+    }
+
+    .menu-wrap,
+    .menu-button {
+        display: block;
+    }
+
+    .responsiveFooterOff {
+        display: none;
+    }
+
+    .responsiveFooterOn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+        nav.menu {
+            display: block;
+        }
+
+    #responsiveNav {
+        display: block;
+    }
+
+    .destinoOption {
+        opacity: 0;
+    }
+
+    h4 {
+        margin: 7px 0 0;
+    }
+
+    .openingpromo h2 {
+        font-size: 22px;
+    }
 }
-@media only screen and (max-width: 320px) {
+
+@media only screen and (min-width: 320px) {
+    .input_fecha_logo {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #browse {
+        height: 235px;
+    }
 }
+
 @media only screen and (min-width: 348px) {
 }
-@media only screen and (max-width: 480px) {
+
+@media only screen and (min-width: 480px) {
+    .input_fecha_logo {
+        width: 50%;
+        margin: 0 25%;
+    }
+
+    #browse {
+        height: 250px;
+    }
 }
-@media only screen and (max-width: 568px) {
+
+@media only screen and (min-width: 568px) {
 }
+
 @media only screen and (min-width: 600px) {
 }
+
 @media only screen and (min-width: 768px) {
-	header {
-	   	padding: 50px 0 0;
-	   	height: 380px;
-	   	overflow: hidden;
-	   	position: relative;
-	   	background: none;
-	}
-	header h1 {
-      	font-size: 31px;
-      	color: #fffefe;
-      	text-align: center;
-      	margin: 65px 0 17px;
-      	font-weight: 700;
-      	line-height: 0.8;
+    header {
+        padding: 50px 0 0;
+        height: 380px;
+        overflow: hidden;
+        position: relative;
+        background: none;
     }
-   	aside {
-   		margin: 30px 0 0;
-   		overflow: hidden;
-   		float: left;
-   		border-right: 1px solid #a0a0a0;
-   		padding: 0 44px 0 0;
-   		width: 40%;
-	}
-		aside h1 {
-		  	color: #979797;
-		  	width: 40%;
-		  	margin: 11px 0 0;
-		}
-		aside ul {
-  			margin: 0;
-  			padding: 0;
-  			float: left;
-  			width: 40%;
-  			clear: none;
-		}
-	h5 {
-   		float: left;
-   		margin: 40px 0 0 0;
-   		width: 25%;
-	}
-   	aside2 {
-   		margin: 30px 0 0;
-   		overflow: hidden;
-   		float: left;
-   		border-right: 1px solid #a0a0a0;
-   		padding: 0 44px 0 0;
-   		width: 40%;
-	}
-	#logoViajarBig {
-   		display: block;
-   		float: left;
-   		clear: none;
-   		margin: 35px 0 0;
-   		width: 25%;
-	}
-   	header h1 {
-   		display: block;
-   	}
-   	#carousel {
-   		display: block;
-   	}
-   	#logo_chelagarto {
-   		margin: 0;
-	}
-	#browse {
-		margin: 0;
-		width: 100%;
-		height: 134px;
-	}
-	#destinos {
-		display: block;
-		margin-top: 38px;
-	}
-	#destinos a {
-    font-size: 13px;
-	}
-	#section_destinos,
-	footer .container {
-		margin: auto;
-	}
-	#legales {
-		padding: 0;
-	}
-	#logoSinergia {
-		margin: 0;
-	}
-	#logoViajar {
-		margin: 0;
-	}
-	nav a {
-      	line-height: 0.8;
-   	}
-   	nav li.circle {
+
+        header h1 {
+            font-size: 31px;
+            color: #fffefe;
+            text-align: center;
+            margin: 65px 0 17px;
+            font-weight: 700;
+            line-height: 0.8;
+        }
+
+    aside {
+        margin: 30px 0 0;
+        overflow: hidden;
+        float: left;
+        border-right: 1px solid #a0a0a0;
+        padding: 0 44px 0 0;
+        width: 40%;
+    }
+
+        aside h1 {
+            color: #979797;
+            width: 40%;
+            margin: 11px 0 0;
+        }
+
+        aside ul {
+            margin: 0;
+            padding: 0;
+            float: left;
+            width: 40%;
+            clear: none;
+        }
+
+    h5 {
+        float: left;
+        margin: 40px 0 0 0;
+        width: 25%;
+    }
+
+    aside2 {
+        margin: 30px 0 0;
+        overflow: hidden;
+        float: left;
+        border-right: 1px solid #a0a0a0;
+        padding: 0 44px 0 0;
+        width: 40%;
+    }
+
+    #logoViajarBig {
+        display: block;
+        float: left;
+        clear: none;
+        margin: 35px 0 0;
+        width: 25%;
+    }
+
+    header h1 {
+        display: block;
+    }
+
+    #carousel {
+        display: block;
+    }
+
+    #logo_chelagarto {
+        margin: 0;
+    }
+
+    #browse {
+        margin: 0;
+        width: 100%;
+        height: 134px;
+    }
+
+    #destinos {
+        display: block;
+        margin-top: 38px;
+    }
+
+        #destinos a {
+            font-size: 13px;
+        }
+
+    #section_destinos,
+    footer .container {
+        margin: auto;
+    }
+
+    #legales {
+        padding: 0;
+    }
+
+    #logoSinergia {
+        margin: 0;
+    }
+
+    #logoViajar {
+        margin: 0;
+    }
+
+    nav a {
+        line-height: 0.8;
+    }
+
+    nav li.circle {
         margin: 5px 10px 0 0;
     }
+
     #franqicia {
-    	margin: 0 266px 0 0;
-	}
-	#grayBox {
-		margin: 0;
-	}
-	nav {
-   		margin: 5px 0 0 67px;
-	}
-   	.responsiveOffArt {
-   		display: block;
-   		margin-top: -22px;
-   	}
-   	.menu-wrap,
-   	.menu-button {
-   		display: none;
-   	}
-   	.banner_667px {
-		height: 340px;
-	}
-	#sectionIcon .col-lg-4:nth-child(2) h1 {
-      	margin: 10px 0 10px;
-   	}
-   	#sectionIcon .col-lg-4:nth-child(3) h1 {
-      	margin: 10px 0 10px;
-   	}
-   	nav {
-   		display: block;
-   	}
-   	#responsiveNav {
-   		display: none;
-   	}
-	h4 {
-   		margin: 9px 0 0;
-	}
-	.input_fecha{
-		width: 30%;
-	}
-.input_fecha_logo {
-    width: 34%;
+        margin: 0 266px 0 0;
+    }
+
+    #grayBox {
+        margin: 0;
+    }
+
+    nav {
+        margin: 5px 0 0 67px;
+    }
+
+    .responsiveOffArt {
+        display: block;
+        margin-top: -22px;
+    }
+
+    .menu-wrap,
+    .menu-button {
+        display: none;
+    }
+
+    .banner_667px {
+        height: 340px;
+    }
+
+    #sectionIcon .col-lg-4:nth-child(2) h1 {
+        margin: 10px 0 10px;
+    }
+
+    #sectionIcon .col-lg-4:nth-child(3) h1 {
+        margin: 10px 0 10px;
+    }
+
+    nav {
+        display: block;
+    }
+
+    #responsiveNav {
+        display: none;
+    }
+
+    h4 {
+        margin: 9px 0 0;
+    }
+
+    .input_fecha {
+        width: 30%;
+        margin: 0 2% 2% 0;
+    }
+
+    .input_fecha_logo {
+        width: 34%;
+    }
+
+    #select_personas {
+        width: 30%;
+    }
+
+    .btn {
+        width: 30%;
+    }
+
+    .openingpromo h2 {
+        font-size: 30px;
+    }
 }
-#select_personas {
-	   	width: 30%;
-	}
-	.btn {
-	   	width: 30%;
-	}
-	.openingpromo h2 {
-		font-size: 30px;
-	}
-}
+
 @media only screen and (min-width: 1024px) {
-	header {
-	   	padding: 50px 0 0;
-	   	height: 644px;
-	   	position: relative;;
-	}
-	header h1 {
-      	font-size: 50px;
-      	color: #fffefe;
-      	text-align: center;
-      	margin: 175px 0 235px;
-      	font-weight: 700;
-      	line-height: 0.8;
-   }
-   
-	#nav,
-	#destinos {
-		display: block;
-		margin: 0;
-	}
-	#destinos a {
-    font-size: 16px;
-	}
-	#select_ciudad {
-	   	float: left;
-	   	display: block;
-	   	width: 20%;
-	   	margin: 0 2% 0 0;
-	   	position: relative;
-	   	overflow: visible;
-	}
-	.input_fecha {
-	   	float: left;
-	   	overflow: visible;
-	   	display: block;
-	   	width: 20%;
-	   	margin: 0 2% 0 0;
-	}
-	#select_personas {
-	   	float: left;
-	   	overflow: visible;
-	   	display: block;
-	   	width: 13%;
-	   	margin: 0 2% 0 0;
-	   	position: relative;
-	}
-	.btn {
-	   	float: left;
-	   	width: 20%;
-	   	font-size: 14px;
-	   	color: #ffffff;
-	   	font-weight: 300;
-	   	text-align: center;
-	   	padding: 7px 0;
-	   	height: 33px;
-	   	transition:all 0.3s ease-in-out;
-	   	-webkit-transition:all 0.3s ease-in-out;
-	   	-moz-transition:all 0.3s ease-in-out;
-	   	-o-transition:all 0.3s ease-in-out;
-	   	-ms-transition:all 0.3s ease-in-out;
-	}
-	#sectionIcon .icon {
-	    float: left;
-	    margin: 0 25px 0 0;
-	}
-	#sectionIcon .data {
-  		float: left;
-  		width: 68%;
-	}
-	#sectionIcon h1 {
-      	text-align: left;
-   	}
-   #sectionIcon p {
-      	text-align: left;
-   	}
-   	.responsiveOn {
-   		display: none;
-   	}
-   	aside {
-   		margin: 20px 0 0;
-   		overflow: hidden;
-   		padding: 0;
-   		width: 100%;
-   		border-right: 0 none;
-	}
-	h5 {
-   		font-size: 21px;
-   		color: #979797;
-   		margin: 0 0 35px;
-   		font-weight: 300;
-   		line-height: 0.8;
-   		text-align: left;
-	}
-   	aside2 {
-   		margin: 20px 0 0;
-   		overflow: hidden;
-   		padding: 0;
-   		width: 100%;
-   		border-right: 0 none;
-	}
-	#logoViajarBig {
-   		width: 243px;
-   		height: 41px;
-   		display: block;
-   		float: left;
-   		clear: both;
-   		margin: 0;
-	}
-		#logoViajarBig .noPaddingLeft {
-		}
-	#franqicia {
-    	margin: 0;
-	}
-	nav {
-   		margin: 5px 0 0;
-	}
-	.responsiveOff {
-   		display: block;
-   	}
-   	#browse {
-		margin: 0;
-		width: 100%;
-		height: 89px;
-	}
-	.banner_667px {
-		height: 680px;
-	}
-	.responsiveFooterOff {
-   		display: block;
-   	}
-   	.responsiveFooterOn {
-   		display: none;
-   	}
-   	.destinoOption {
-   		opacity: 1;
-   	}
+    header {
+        padding: 50px 0 0;
+        height: 644px;
+        position: relative;
+        ;
+    }
+
+        header h1 {
+            font-size: 50px;
+            color: #fffefe;
+            text-align: center;
+            margin: 175px 0 235px;
+            font-weight: 700;
+            line-height: 0.8;
+        }
+
+    #nav,
+    #destinos {
+        display: block;
+        margin: 0;
+    }
+
+        #destinos a {
+            font-size: 16px;
+        }
+
+    #select_ciudad {
+        float: left;
+        display: block;
+        width: 20%;
+        margin: 0 2% 0 0;
+        position: relative;
+        overflow: visible;
+    }
+
+    .input_fecha {
+        float: left;
+        overflow: visible;
+        display: block;
+        width: 20%;
+        margin: 0 2% 0 0;
+    }
+
+    #select_personas {
+        float: left;
+        overflow: visible;
+        display: block;
+        width: 12%;
+        margin: 0 2% 0 0;
+        position: relative;
+    }
+
+    .btn {
+        float: left;
+        width: 20%;
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 300;
+        text-align: center;
+        padding: 7px 0;
+        height: 33px;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+    }
+
+    #sectionIcon .icon {
+        float: left;
+        margin: 0 25px 0 0;
+    }
+
+    #sectionIcon .data {
+        float: left;
+        width: 68%;
+    }
+
+    #sectionIcon h1 {
+        text-align: left;
+    }
+
+    #sectionIcon p {
+        text-align: left;
+    }
+
+    .responsiveOn {
+        display: none;
+    }
+
+    aside {
+        margin: 20px 0 0;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+        border-right: 0 none;
+    }
+
+    h5 {
+        font-size: 21px;
+        color: #979797;
+        margin: 0 0 35px;
+        font-weight: 300;
+        line-height: 0.8;
+        text-align: left;
+    }
+
+    aside2 {
+        margin: 20px 0 0;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+        border-right: 0 none;
+    }
+
+    #logoViajarBig {
+        width: 243px;
+        height: 41px;
+        display: block;
+        float: left;
+        clear: both;
+        margin: 0;
+    }
+
+        #logoViajarBig .noPaddingLeft {
+        }
+
+    #franqicia {
+        margin: 0;
+    }
+
+    nav {
+        margin: 5px 0 0;
+    }
+
+    .responsiveOff {
+        display: block;
+    }
+
+    #browse {
+        margin: 0;
+        width: 100%;
+        height: 89px;
+    }
+
+    .banner_667px {
+        height: 680px;
+    }
+
+    .responsiveFooterOff {
+        display: block;
+    }
+
+    .responsiveFooterOn {
+        display: none;
+    }
+
+    .destinoOption {
+        opacity: 1;
+    }
 }
+
 @media only screen and (min-width: 1400px) {
 }
 /*--- END MEDIA QUERY ---*/

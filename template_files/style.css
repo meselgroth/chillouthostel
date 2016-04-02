@@ -1318,7 +1318,7 @@ img #logo_chillouthostel {
 
 img.logo {
     width: 100%;
-    margin: 9px 6px;
+    margin: -14px 0 14px -5px;
 }
 
 .bg-transp {
@@ -1614,3 +1614,6 @@ img.promoimg {
 .spacer {
     margin: 30px;
 }
+
+.input_fecha.input_fecha_logo {
+    overflow: visible;
