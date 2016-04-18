@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-
 html {
     overflow-x: hidden;
 }
@@ -26,6 +24,7 @@ header {
 footer {
     background: #f2f2f2;
 }
+
     footer h1 {
         font-size: 20px;
         text-align: left;
@@ -35,6 +34,7 @@ footer {
         font-weight: 300;
         width: 100%;
     }
+
     footer h2 {
         font-size: 13px;
         color: #00008B;
@@ -87,15 +87,15 @@ h1 {
 h2 {
 }
 
-    h3 {
-        font-size: 20px;
-        text-align: left;
-        color: #979797;
-        margin: 32px 0 14px;
-        line-height: 0.8;
-        font-weight: 300;
-        width: 100%;
-    }
+h3 {
+    font-size: 20px;
+    text-align: left;
+    color: #979797;
+    margin: 32px 0 14px;
+    line-height: 0.8;
+    font-weight: 300;
+    width: 100%;
+}
 
 h4 {
     margin: 9px 0 0;
@@ -126,7 +126,23 @@ h6 {
     padding: 0 20px 0 0;
 }
 
-p {
+.welcome {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+}
+
+.pad-port-1 {
+    padding: 2%;
+}
+
+.pad-port-2 {
+    padding: 2%;
+}
+
+.pad-port-3 {
+    padding: 3%;
 }
 
 nav {
@@ -1383,52 +1399,53 @@ img.sociallogo {
 
 
 .contact-top {
-  text-align: center;
-}
-.contact-top h1 {
-  color:#044772;
-  margin-bottom: 0;
+    text-align: center;
 }
 
+    .contact-top h1 {
+        color: #044772;
+        margin-bottom: 0;
+    }
+
 .contact-left, .contact-right {
-     font-family: 'Microsoft JhengHei';
-     font-size:13px;
-     font-weight:bold;
+    font-family: 'Microsoft JhengHei';
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .contact {
-  padding:5em 0em 5em 0em;
+    padding: 5em 0em 5em 0em;
 }
 
 .contact-left input[type="text"] {
-  display: inline-block;
-  background: #f2fbff;
-  border: 1px solid #A3A1A1;
-  width: 100%;
-  outline: none;
-  font-size: 0.95em;
-  color: #747577;
-  font-weight: 400;
-  padding: 13px 15px 13px 15px;
-  margin: 0.5em 0em 1.5em 0em;
-  border-radius:5px;
-}
-.contact-right textarea {
-  background: none;
-  border: 1px solid #A3A1A1;
-  width: 100%;
-  display: block;
-  height: 205px;
-  outline: none;
-  font-size: 0.9em;
+    display: inline-block;
     background: #f2fbff;
-  color: #747577;
-  font-weight: 400;
-  resize: ;
-  padding: 10px 15px 10px 15px;
-  margin-top:20px;
-  border-radius:5px;
+    border: 1px solid #A3A1A1;
+    width: 100%;
+    outline: none;
+    font-size: 0.95em;
+    color: #747577;
+    font-weight: 400;
+    padding: 13px 15px 13px 15px;
+    margin: 0.5em 0em 1.5em 0em;
+    border-radius: 5px;
+}
 
+.contact-right textarea {
+    background: none;
+    border: 1px solid #A3A1A1;
+    width: 100%;
+    display: block;
+    height: 205px;
+    outline: none;
+    font-size: 0.9em;
+    background: #f2fbff;
+    color: #747577;
+    font-weight: 400;
+    resize:;
+    padding: 10px 15px 10px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 /*facebook custom html*/
 
@@ -1528,16 +1545,28 @@ h2.social {
     font-weight: 300;
     line-height: 0.8;
     text-align: center;
-    color: #00008B;
-    text-shadow: 0px 0px 1px #000;
+    color: #000000;
+    text-shadow: 0px 0px 1px #00008B;
 }
+
 h3.social {
     /* color: rgb(255,255,255); */
     /* text-shadow: -1px 1px 1px #000000; */
     margin: 32px 0;
 }
 
-.bg-lightblue {background: rgb(252, 176, 64);}
+.bg-orange {
+    background: #FCB040;
+}
+
+.bg-lightred {
+    background: #FA635E;
+}
+
+.bg-lightblue {
+    background: #0078A6;
+}
+
 
 .socialbox {
     background: rgba(255,255,255,.7);
@@ -1552,14 +1581,16 @@ h3.social {
 
 .blueshortline {
     height: 2px;
-    width:100px;
-    margin-top:25px;
-    margin-bottom:25px;
+    width: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     background-color: #00008B;
     text-align: center;
 }
 
-.submit {padding: 15px 15px 35px;}
+.submit {
+    padding: 15px 15px 35px;
+}
 
 .contact-main {
     padding: 0 15px;
@@ -1617,3 +1648,22 @@ img.promoimg {
 
 .input_fecha.input_fecha_logo {
     overflow: visible;
+}
+
+.margincorrection {
+    margin-top: -22px;
+}
+
+.margin-h1-spacer {
+    margin: 28px 0 32px;
+    background: #00AEEF;
+}
+
+.text-white-fire {
+    color: #555;
+    text-shadow: 0px -2px 6px #f5f5f5;
+}
+
+.not-finished {
+    display: none;
+}
