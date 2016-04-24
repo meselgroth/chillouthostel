@@ -1,37 +1,23 @@
-function abrirRecepcion(sAction, iReserva, tipoLogin) {
-    if (tipoLogin == null) {
-        var tipoLogin = "";
-    }
-
-    $(".cuerpo").css("cursor", "wait");
-
-    if (tipoLogin == 'm') { //osea si es tipo mobile
-        $(".overlay_modal").css("display", "");
-        $("#close-button").click();
-    }
-
-    return false;
-}
-
-function cerrarLogin() {
-    jQuery("#login_container").hide();
-    jQuery("#login_containerm").hide();
-    $(".overlay_modal").css("display", "none");
-}
-
-$(document).ready(function () { //cambia el favicon de la web
-    jQuery('link[rel="shortcut icon"]').attr('href', '/favicon.ico');
-    
+$(document).ready(function () {
     //Smooth Scrolling
     $(".scroll").click(function (event) {
         event.preventDefault();
         console.log($(this).show());
         $('html,body').animate({ scrollTop: $(this.hash).offset().top - 118 }, 1000);
     });
-})
+    $(".search-btn").click(function (e) {
+        enviarBookingHome($(e.target).data("navid"));
+    });
+    $("#nav").sticky({ topSpacing: 0 });
+    
+    $("#destino_f").mouseover(function () {
+        $("#destinoOption_a, #destinoOption_b, #destinoOption_c, #destinoOption_d").fadeOut("slow", function () {
+        });
+        $("#destinoOption_f").fadeIn("slow", function () {
+        });
+    });
+});
 
-
-var banderaEvent = 0;
 
 function cambiarSelect(campoA, campoB) {
     var $select = $("#" + campoA).selectize();
@@ -54,139 +40,112 @@ $(document).ready(function () {
     $('div[id=browse]').click(function () {
         alert("Not yet working!");
     });
+    var dateFromScrolling = $('#dateFromScrolling');
+    var dateToScrolling = $('#dateToScrolling');
+    var dateFromTopNav = $('#dateFromTopNav');
+    dateFromScrolling.datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
+    dateToScrolling.datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
+    dateFromTopNav.datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
+    var dateToTopNav = $('#dateToTopNav');
+    dateToTopNav.datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
 
-    //$('#nochesDesdeS').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
-    //$('#nochesHastaS').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
-    //$('#nochesDesdeC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
-    //$('#nochesHastaC').datepicker({ autoclose: true, ignoreReadonly: true, language: "en", format: 'dd/mm/yyyy', startDate: 'd/m/Y' });
+    dateFromTopNav.change(function () {
+        if (!sincronisando) {
+            sincronisando = true;
+            dateFromScrolling.val(dateFromTopNav.val());
+            sincronisando = false;
 
-    //$("#nochesDesdeC").change(function () {
-    //    if (!sincronisando) {
-    //        sincronisando = true;
-    //        $("#nochesDesdeS").val($("#nochesDesdeC").val());
-    //        sincronisando = false;
+            var fechaDesde = dateFromTopNav.datepicker('getDate');
+            fechaDesde.setTime(fechaDesde.getTime() + ((1000 * 3600 * 24) * 1));
 
-    //        var fechaDesde = $('#nochesDesdeC').datepicker('getDate');
-    //        fechaDesde.setTime(fechaDesde.getTime() + ((1000 * 3600 * 24) * 1));
+            dateToTopNav.datepicker('setStartDate', fechaDesde);
+            if (dateToTopNav.datepicker('getDate') == null) {
+                dateToTopNav.datepicker('setDate', fechaDesde);
+            }
+            dateToScrolling.datepicker('setStartDate', fechaDesde);
+            if (dateToScrolling.datepicker('getDate') == null) {
+                dateToScrolling.datepicker('setDate', fechaDesde);
+            }
+        }
+    });
+    dateToTopNav.change(function () {
+        if (!sincronisando) {
+            sincronisando = true;
+            dateToScrolling.val(dateToTopNav.val());
+            sincronisando = false;
+        }
+    });
+    $("#cantPersonasC").change(function () {
+        if (!sincronisando) {
+            sincronisando = true;
+            cambiarSelect("cantPersonasS", "cantPersonasC");
+            sincronisando = false;
+        }
+    });
 
-    //        $('#nochesHastaC').datepicker('setStartDate', fechaDesde);
-    //        if ($('#nochesHastaC').datepicker('getDate') == null) {
-    //            $('#nochesHastaC').datepicker('setDate', fechaDesde);
-    //        }
-    //        $('#nochesHastaS').datepicker('setStartDate', fechaDesde);
-    //        if ($('#nochesHastaS').datepicker('getDate') == null) {
-    //            $('#nochesHastaS').datepicker('setDate', fechaDesde);
-    //        }
-    //    }
-    //});
-    //$("#nochesHastaC").change(function () {
-    //    if (!sincronisando) {
-    //        sincronisando = true;
-    //        $("#nochesHastaS").val($("#nochesHastaC").val());
-    //        sincronisando = false;
-    //    }
-    //});
-    //$("#cantPersonasC").change(function () {
-    //    if (!sincronisando) {
-    //        sincronisando = true;
-    //        cambiarSelect("cantPersonasS", "cantPersonasC");
-    //        sincronisando = false;
-    //    }
-    //});
+    //CAMBIOS DEL BOOKING 2 AL 1
+    dateFromScrolling.change(function () {
+        if (!sincronisando) {
+            sincronisando = true;
+            dateFromTopNav.val(dateFromScrolling.val());
+            sincronisando = false;
 
-    ////CAMBIOS DEL BOOKING 2 AL 1
-    //$("#nochesDesdeS").change(function () {
-    //    if (!sincronisando) {
-    //        sincronisando = true;
-    //        $("#nochesDesdeC").val($("#nochesDesdeS").val());
-    //        sincronisando = false;
+            var fechaDesde = dateFromScrolling.datepicker('getDate');
+            fechaDesde.setTime(fechaDesde.getTime() + ((1000 * 3600 * 24) * 1));
 
-    //        var fechaDesde = $('#nochesDesdeS').datepicker('getDate');
-    //        fechaDesde.setTime(fechaDesde.getTime() + ((1000 * 3600 * 24) * 1));
+            dateToScrolling.datepicker('setStartDate', fechaDesde);
+            if (dateToScrolling.datepicker('getDate') == null) {
+                dateToScrolling.datepicker('setDate', fechaDesde);
+            }
 
-    //        $('#nochesHastaS').datepicker('setStartDate', fechaDesde);
-    //        if ($('#nochesHastaS').datepicker('getDate') == null) {
-    //            $('#nochesHastaS').datepicker('setDate', fechaDesde);
-    //        }
-
-    //        $('#nochesHastaC').datepicker('setStartDate', fechaDesde);
-    //        if ($('#nochesHastaC').datepicker('getDate') == null) {
-    //            $('#nochesHastaC').datepicker('setDate', fechaDesde);
-    //        }
-    //    }
-    //});
-    //$("#nochesHastaS").change(function () {
-    //    if (!sincronisando) {
-    //        sincronisando = true;
-    //        $("#nochesHastaC").val($("#nochesHastaS").val());
-    //        sincronisando = false;
-    //    }
-    //});
-    //$("#cantPersonasS").change(function () {
-    //    if (!sincronisando) {
-    //        sincronisando = true;
-    //        cambiarSelect("cantPersonasC", "cantPersonasS");
-    //        sincronisando = false;
-    //    }
-    //});
+            dateToTopNav.datepicker('setStartDate', fechaDesde);
+            if (dateToTopNav.datepicker('getDate') == null) {
+                dateToTopNav.datepicker('setDate', fechaDesde);
+            }
+        }
+    });
+    dateToScrolling.change(function () {
+        if (!sincronisando) {
+            sincronisando = true;
+            dateToTopNav.val(dateToScrolling.val());
+            sincronisando = false;
+        }
+    });
+    $("#cantPersonasS").change(function () {
+        if (!sincronisando) {
+            sincronisando = true;
+            cambiarSelect("cantPersonasC", "cantPersonasS");
+            sincronisando = false;
+        }
+    });
 });
 
-function enviarBookingHome(form) {
-    var muestraMensaje = true;
+function enviarBookingHome(navid) {
 
-    //VALIDO LOS CAMPOS DEL BOOKING
-    var idHostel = $('#idHostel' + form).val();
-    var fechaDesde = $('#nochesDesde' + form).datepicker('getDate');
-    var fechaHasta = $('#nochesHasta' + form).datepicker('getDate');
-    var cPersonas = $('#cantPersonas' + form).val();
+    var dateFrom = $('#dateFrom' + navid).datepicker('getDate');
+    var dateTo = $('#dateTo' + navid).datepicker('getDate');
+    var cPersonas = $('#cantPersonas' + navid).val();
 
     var cNoches = 0;
     var msg = '';
-    if ((fechaDesde != null) && (fechaHasta != null)) {
-        var timeDiff = Math.abs(fechaHasta.getTime() - fechaDesde.getTime());
+    if ((dateFrom != null) && (dateTo != null)) {
+        var timeDiff = Math.abs(dateTo.getTime() - dateFrom.getTime());
         cNoches = Math.ceil(timeDiff / (1000 * 3600 * 24));
-        if (fechaHasta <= fechaDesde) {
+        if (dateTo <= dateFrom) {
             console.log('esta mal');
             msg += 'Arrival and chueck out dates are not correct\n';
-            muestraMensaje = true;
         }
     }
 
-    if (idHostel == 0) {
-        msg += 'Select city\n';
+    if (dateFrom == null) {
+        msg += 'Select the arrival date\n';
     }
-
-    if (fechaDesde == null) {
-        msg += 'Select the arribal date\n';
-    }
-    if (fechaHasta == null) {
+    if (dateTo == null) {
         msg += 'Select the departure\n';
     }
 
     if (msg != '') {
-        if (muestraMensaje) {
-            swal("Invalid data", msg, "error");
-        }
     } else {
-        var valor = idHostel.split(",");
-
-        if (valor[1] > 1) { //es multidestino
-            window.location = "https://chillouthostelboracay.com/index.php?option=com_chillouthostel&controller=multidestino&task=display&idCiudad=" + valor[2] + "&fechaDesde=" + formatFecha(fechaDesde) + "&fechaHasta=" + formatFecha(fechaHasta) + "&cPersonas=" + cPersonas;
-        } else {
-            window.location = "https://chillouthostelboracay.com/index.php?option=com_chillouthostel&controller=micrositio&idHostel=" + valor[0] + "&fechaDesde=" + formatFecha(fechaDesde) + "&fechaHasta=" + formatFecha(fechaHasta) + "&cPersonas=" + cPersonas;
-        }
+        //book now
     }
-}
-
-
-$(window).load(function () {
-    $("#nav").sticky({ topSpacing: 0 });
-});
-
-$("#masDestinos").click(function () {
-    $("#destOcultos").toggle("slow", callbackFn);
-})
-
-function callbackFn() {
-    $(this).is(":visible") ? $("#masDestinos").text("LESS DESTINATIONS") : $("#masDestinos").text("MORE DESTINATIONS");
 }

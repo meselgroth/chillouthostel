@@ -947,78 +947,13 @@ select {
     .banner_263px:hover img {
         right: -3%;
     }
-
-#masDestinos {
-    width: 100%;
-    background: #767676;
-    display: block;
-    font-size: 32px;
-    color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 400;
-    line-height: 0.8;
-    padding: 10px 0;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-}
-
-    #masDestinos:hover {
-        color: #ffffff;
-        text-decoration: none;
-        background: #a6ca3e;
-    }
-
-#destOcultos {
-    display: none;
-}
-
+    
 #video {
     width: 100%;
     overflow: hidden;
     background: #FCB040;
     padding: 20px 0;
 }
-
-#sectionIcon {
-    padding: 40px 0;
-}
-
-    #sectionIcon .icon {
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        float: left;
-        background: #8cb619;
-        border-radius: 50%;
-        position: relative;
-        margin: 0 25px 0 0;
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-    }
-
-        #sectionIcon .icon:hover {
-            background: #fbbc1e;
-        }
-
-            #sectionIcon .icon:hover img {
-                -webkit-animation: 2s iconoanimado 1;
-                -moz-animation: 2s iconoanimado 1;
-                -o-animation: 2s iconoanimado 1;
-                -ms-animation: 2s iconoanimado 1;
-            }
-
-    #sectionIcon .data {
-        float: left;
-        width: 68%;
-    }
 
 #grayBox {
     background: #585858;
@@ -1687,4 +1622,9 @@ img.promoimg {
 
 .welcome h1 {
     margin: 15px;
+}
+
+.max-width-1600 {
+    max-width: 1600px;
+    margin: auto;
 }

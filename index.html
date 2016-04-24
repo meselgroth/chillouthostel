@@ -24,21 +24,15 @@
     <meta name="author" content="Michael Eselgroth">
     <meta name="generator" content="Chill Out Hostel Boracay">
     <title>Chill Out Hostel - chill escape enjoy.</title>
-    <link rel="stylesheet" href="./template_files/showLoading.css" type="text/css">
 
-    <link href="template_files/fonts.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./template_files/bootstrap.css">
-    <link rel="stylesheet" href="./template_files/style.css">
-    <link rel="stylesheet" href="./template_files/responsive.css">
-    <link rel="stylesheet" href="./template_files/animation.css">
-    <link rel="stylesheet" href="./template_files/menu_sideslide.css">
+    <link href="./content/fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./content/bootstrap.css">
+    <link rel="stylesheet" href="./content/style.css">
+    <link rel="stylesheet" href="./content/responsive.css">
+    <link rel="stylesheet" href="./content/menu_sideslide.css">
     <link rel="stylesheet" href="./template_files/bootstrap-datepicker.css">
     <link rel="stylesheet" href="./template_files/selectize.default.css">
     <link rel="stylesheet" href="./template_files/selectize_clh_theme.css">
-    <link rel="stylesheet" href="./template_files/login.css">
-
-    <link rel="stylesheet" type="text/css" href="./template_files/sweetalert.css">
-    <link rel="stylesheet" type="text/css" href="./template_files/facebook.css">
 
     <!--<link rel="alternate" hreflang="es" href="https://chillouthostelboracay.com/es/">
     <link rel="alternate" hreflang="pt" href="https://chillouthostelboracay.com/pt/">
@@ -70,7 +64,7 @@
                                 <div class="icon">
                                     <span class="glyphicon glyphicon-calendar color-db fs-19"></span>
                                 </div>
-                                <input placeholder="Arrival" id="nochesDesdeC" readonly="">
+                                <input placeholder="Arrival" id="dateFromScrolling" readonly="">
                             </div>
                             <!-- END INPUT -->
                             <!-- BEGIN INPUT -->
@@ -78,7 +72,7 @@
                                 <div class="icon">
                                     <span class="glyphicon glyphicon-calendar color-db fs-19"></span>
                                 </div>
-                                <input placeholder="Checkout" id="nochesHastaC" readonly="">
+                                <input placeholder="Checkout" id="dateToScrolling" readonly="">
                             </div>
                             <!-- END INPUT -->
                             <!-- BEGIN SELECT -->
@@ -89,7 +83,7 @@
                                 <select id="cantPersonasC" class="demo-default selectized" placeholder="INVITADOS" readonly="" tabindex="-1" style="display: none;"><option value="1" selected="selected">1</option></select><div class="selectize-control demo-default single"><div class="selectize-input items full has-options has-items"><div data-value="1" class="item">1</div><input type="text" autocomplete="off" tabindex="" style="width: 4px;"></div><div class="selectize-dropdown single demo-default" style="display: none; width: 100px; top: 33px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
                             </div>
                             <!-- END SELECT -->
-                            <a style="cursor:pointer;" class="btn">SEARCH</a> <!--onclick="enviarBookingHome('C')"-->
+                            <a style="cursor:pointer;" class="btn search-btn" data-navid="Scrolling">SEARCH</a>
 
                         </div>
                     </div>
@@ -148,6 +142,7 @@
                     <button class="menu-button" id="open-button">Open Menu</button>
                     <!-- END RESPONSIVE NAV -->
                 </div>
+                <!-- TOP NAV -->
                 <div class="col-xs-12 col-sm-11 col-lg-10">
                     <div id="browse">
                         <div class="input_fecha input_fecha_logo">
@@ -155,23 +150,18 @@
                                 <img src="/images/logo.png" alt="Chill Out" class="logo">
                             </a>
                         </div>
-                        <!-- BEGIN INPUT -->
                         <div class="input_fecha">
                             <div class="icon">
                                 <span class="glyphicon glyphicon-calendar color-db fs-19"></span>
                             </div>
-                            <input placeholder="Arrival" id="nochesDesdeS" readonly="">
+                            <input placeholder="Arrival" id="dateFromTopNav" readonly="">
                         </div>
-                        <!-- END INPUT -->
-                        <!-- BEGIN INPUT -->
                         <div class="input_fecha">
                             <div class="icon">
                                 <span class="glyphicon glyphicon-calendar color-db fs-19"></span>
                             </div>
-                            <input placeholder="Checkout" id="nochesHastaS" readonly="">
+                            <input placeholder="Checkout" id="dateToTopNav" readonly="">
                         </div>
-                        <!-- END INPUT -->
-                        <!-- BEGIN SELECT -->
                         <div class="btn-group" id="select_personas">
                             <div class="icon">
                                 <span class="glyphicon glyphicon-user color-db fs-19"></span>
@@ -193,8 +183,7 @@
                                 <option value="13">13</option>
                             </select>
                         </div>
-                        <!-- END SELECT -->
-                        <a class="btn" style="cursor:pointer;">SEARCH</a> <!--onclick="enviarBookingHome('S')"-->
+                        <a class="btn search-btn" style="cursor:pointer;" data-navid="TopNav">SEARCH</a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-1 col-lg-1 responsiveOffArt" style="display: none">
@@ -210,6 +199,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- END TOP NAV -->
             </div>
         </div>
         <!-- END NAV -->
@@ -242,7 +232,7 @@
                             <a id="destino_e" class="scroll" href="#social">GET INVOLVED</a>
                         </li>-->
                     <!--<li>
-                            <a id="destino_f" class="scroll" href="#">THINGS TO DO</a>
+                            <a id="destino_f" href="#">THINGS TO DO</a>
                         </li>-->
                 </ul>
             </div>
@@ -292,7 +282,7 @@
         </div>
     </div>
     <div class="container-fluid bg-darkblue welcome" id="content">
-        <div class="pad-port-4">
+        <div class="pad-port-4 max-width-1600">
             <div class="row display-table">
                 <div class="col-sm-4 display-cell">
                     <img class="img-circle" style="width:100%" src="/images/buildingfront.jpg" alt="Front of building" />
@@ -309,8 +299,10 @@
                 <div class="col-sm-8 display-cell">
                     <p>
                         Our mixed aircon/non-aircon dorm rooms offer you maximum privacy with individual bed curtains, lockers big enough to fit your backpack, ensuite hot & cold showers with free shampoo, shower gel and bath towels, cleanliness at its best.
+                    </p>
+                    <p>
                         Chill Out Hostel provides free breakfast, affordable food and drinks at our Chill Restobar, free WiFi a lounge area with a wide screen TV, different activities such as pool table, darts and more. Save your time and money by checking our Chill Out info board for things to do in Boracay, getting around, night life and events around the island.
-                    </p><p>
+                    </p>
                 </div>
                 <div class="col-sm-4 display-cell">
                     <img class="img-circle" style="width:100%" src="/images/room.jpg" alt="Dorm room" />
@@ -319,7 +311,7 @@
             </div>
             <div class="row display-table">
                 <div class="col-sm-4 display-cell">
-                    <img class="img-circle" style="width:100%" src="/images/Rum-Barrel.jpg" alt="" />
+                    <img class="img-circle" style="width:100%" src="/images/boat.jpg" alt="" />
                 </div>
                 <div class="col-sm-8 display-cell">
                     CHILL ESCAPE ENJOY
@@ -345,39 +337,20 @@
             </div>
             <div class="row display-table">
                 <div class="col-sm-8 display-cell">
-                    <p>
-                        We are having our soft-opening!! Come be our first guests to experience the chill, fun, relax vibe of our hostel…
-                    </p>
-                </div>
-
-                <div class="col-sm-4 display-cell">
-                    <img class="img-circle" style="width:100%" src="/images/champagne.jpg" alt="" />
-                </div>
-            </div>
-            <div class="row display-table">
-                <p>
                     Coming Soon:
-                    Bar overlooking the swimming pool where we’ll be having Boracay’s best pool parties.
-                </p>
-                <!--<div class="col-sm-4">
-            <img class="img-circle" style="width:100%" src="/images/pool.jpg" alt="" />
-        </div>
-        <div class="col-sm-8">
-
-
-        </div>-->
-
-
+                    We are building a beautiful bar and restaurant overlooking a swimming pool where we’ll be having Boracay’s best pool parties.
+                </div>
+                <div class="col-sm-4 display-cell">
+                    <img class="img-circle" style="width:100%" src="/images/pool.jpg" alt="" />
+                </div>
             </div>
         </div>
     </div>
     <div class="container-fluid bg-orange not-finished" id="specialoffers">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="max-width-1600">
                 <div class="openingpromo">
-                    <h2>Opening Promo</h2>
-                    <img src="images/champs.jpg" class="promoimg" />
-                    <div>20% Discount! Book Now!</div>
+                    <img src="" class="promoimg" alt="promo" />
                 </div>
                 <div class="clearfix spacer"></div>
             </div>
@@ -578,7 +551,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-lg-8" style="font-size: 11px;">
-                        <span>© 2015 Chill Out Hostel - </span><a href="https://chillouthostelboracay.com/en/#" onclick="jQuery('html, body').animate({ scrollTop: 0 }, 500); return abrirRecepcion();">Chill Out Hostel Boracay</a> | Built by Michael Eselgroth
+                        <span>© 2015 Chill Out Hostel - </span><a href="https://chillouthostelboracay.com/en/#" onclick="jQuery('html, body').animate({ scrollTop: 0 }, 500); return false;">Chill Out Hostel Boracay</a> | Built by Michael Eselgroth
                     </div>
                 </div>
             </div>
@@ -587,8 +560,10 @@
     <!-- END FOOTER -->
 
     <script src="./template_files/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>-->
+
     <script src="./template_files/bootstrap.min.js"></script>
-    <script src="./template_files/classie.js"></script>
+    <script src="./js/classie.js"></script>
 
     <script type="text/javascript" src="./template_files/jquery.sticky.js"></script>
     <script type="text/javascript" src="./template_files/moment-with-locales.js"></script>
@@ -598,11 +573,7 @@
     <script type="text/javascript" src="./template_files/bootstrap-datepicker.pt.min.js"></script>
     <script type="text/javascript" src="./template_files/select2.full.min.js"></script>
 
-    <script type="text/javascript" src="./template_files/sweetalert.min.js"></script>
-    <script type="text/javascript" src="./template_files/jquery.showLoading.min.js"></script>
-
-    <script src="./template_files/destinos.js"></script>
-    <script src="./template_files/main.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./template_files/funciones.js"></script>
 
     <script src="js/main.js"></script>
