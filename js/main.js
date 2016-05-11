@@ -11,8 +11,8 @@ $(document).ready(function () {
     $("#nav").sticky({ topSpacing: 0 });
     
     $("#destino_f").mouseover(function () {
-        $("#destinoOption_a, #destinoOption_b, #destinoOption_c, #destinoOption_d").fadeOut("slow", function () {
-        });
+        //$("#destinoOption_a, #destinoOption_b, #destinoOption_c, #destinoOption_d").fadeOut("slow", function () {
+        //});
         $("#destinoOption_f").fadeIn("slow", function () {
         });
     });
@@ -38,7 +38,7 @@ $(document).ready(function () {
     });
 
     $('div[id=browse]').click(function () {
-        alert("Not yet working!");
+        //alert("Not yet working!");
     });
     var dateFromScrolling = $('#dateFromScrolling');
     var dateToScrolling = $('#dateToScrolling');
@@ -147,5 +147,10 @@ function enviarBookingHome(navid) {
     if (msg != '') {
     } else {
         //book now
+        $.post("https://myallocator.com/en/booknow/o2skXtyWkETOOjB2RDP6Hg/rooms",
+            { "lang" :"=en&date_start=2016-05-04&nights=2" },
+            function(data) {
+                $(".content").html = data;
+            });
     }
 }

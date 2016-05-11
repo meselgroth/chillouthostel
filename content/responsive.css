@@ -200,6 +200,12 @@
     .openingpromo h2 {
         font-size: 22px;
     }
+    iframe.booknow {
+    width: 100%;
+}
+#navAlwaysTop {
+    position: absolute;
+}
 }
 
 @media only screen and (min-width: 320px) {
@@ -221,6 +227,10 @@
         width: 50%;
         margin: 0 25%;
     }
+
+    #navAlwaysTop #browse {
+    height: 50px;
+}
 
     #browse {
         height: 250px;
@@ -420,6 +430,9 @@
         padding-top: 0;
         padding-bottom: 0;
     }
+    #navAlwaysTop {
+    position: fixed;
+}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -427,7 +440,6 @@
         padding: 50px 0 0;
         height: 644px;
         position: relative;
-        ;
     }
 
         header h1 {
@@ -588,3 +600,6 @@
 @media only screen and (min-width: 1400px) {
 }
 /*--- END MEDIA QUERY ---*/
+#select_personas{
+    visibility:hidden;
+}
