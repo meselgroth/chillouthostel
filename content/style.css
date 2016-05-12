@@ -103,7 +103,7 @@ h4 {
     line-height: 0.8;
     font-size: 17px;
     color: #fffefe;
-    font-weight: 400 !important;
+    font-weight: 400;
     text-shadow: -1px 1px 1px #000;
 }
 
@@ -1560,9 +1560,9 @@ h3.social {
 }
 
 img.promoimg {
-    width: 90%;
-    border-radius: 10px;
-    float: right;
+    width: 100%;
+    border-radius: 5px;
+    /* float: right; */
     box-shadow: 2px 2px 5px #000;
 }
 
@@ -1601,7 +1601,7 @@ img.promoimg {
     margin-top: -22px;
 }
 
-.bg-lightblue {
+.border-logo {
     border-top: 15px solid #00AEEF;
     border-bottom: 15px solid #FCB040;
 }
@@ -1657,13 +1657,46 @@ iframe.booknow {
     width: 95%;
 }
 
-header {
-}
-
 header.booknow {
     background: url(../img/bg/header_bg1_1920.jpg) left top repeat;
 }
 
 .logo.logo-booknow {
     margin: 0;
+}
+
+.tmpPromo {
+    width: 58%;
+    float: left;
+    overflow: visible;
+    display: block;
+    margin: 0 0 0 0;
+}
+
+.tmpPromo h4 {
+    float: left;
+    text-shadow: 0px -2px 6px #f5f5f5;
+    color: #333;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.tmpPromo a {color: #000;padding: 4px;line-height: 1;border: 1px solid #777;border-radius: 4px;box-shadow: 0px 0px 2px #fff;text-decoration: none;font-size: 14px;font-weight: 800;}
+
+.promobtn {
+    margin: 11px 20px;
+    display: inline-block;
+}
+
+.bg-dark {
+    background: darkslateblue;
+    border-top: 15px solid #fff;
+}
+
+#promo .display-cell {
+    vertical-align: top;
+}
+
+#promo div {
+    text-shadow: 2px 2px 5px #000;
 }

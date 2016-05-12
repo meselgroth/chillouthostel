@@ -57,6 +57,10 @@
     .input_fecha_logo {
         width: 100%;
     }
+    
+    .tmpPromo {
+    width: 52%;
+    }
 
     #select_personas {
         float: left;
@@ -413,6 +417,9 @@
     .input_fecha_logo {
         width: 34%;
     }
+    .tmpPromo {
+    width: 34%;
+    }
 
     #select_personas {
         width: 30%;
@@ -476,6 +483,9 @@
         display: block;
         width: 20%;
         margin: 0 2% 0 0;
+    }
+    .tmpPromo {
+    width: 58%;
     }
 
     #select_personas {
