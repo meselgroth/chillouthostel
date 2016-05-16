@@ -84,8 +84,7 @@ h1 {
     line-height: 0.8;
 }
 
-h2 {
-}
+h2 {margin-top:0;margin-bottom: 20px;}
 
 h3 {
     font-size: 20px;
@@ -425,6 +424,7 @@ select {
     background: white;
     height: 73px;
     background: rgba(255,255,255,0.5);
+    text-align: right;
 }
 
 #select_ciudad {
@@ -1612,7 +1612,7 @@ img.promoimg {
 }
 
 .not-finished {
-    display: none;
+    display:none;
 }
 
 .margincorrection h1 {
@@ -1674,17 +1674,22 @@ header.booknow {
 }
 
 .tmpPromo h4 {
+    display: inline-block;
+    text-shadow: -2px -2px 12px #fff;
+    color: rgba(0,0,0,0);
+    line-height: .9;
+    font-weight: 400;
+    font-size: 23px;
     float: left;
-    text-shadow: 0px -2px 6px #f5f5f5;
-    color: #333;
-    line-height: 1.1;
-    font-weight: 600;
+    margin: 5px;
 }
 
-.tmpPromo a {color: #000;padding: 4px;line-height: 1;border: 1px solid #777;border-radius: 4px;box-shadow: 0px 0px 2px #fff;text-decoration: none;font-size: 14px;font-weight: 800;}
+.tmpPromo a { text-decoration: none;}
+.tmpPromo span {color: #000;padding: 7px;line-height: 1;border: 1px solid #777;border-radius: 1px;box-shadow: 0px 0px 2px #fff;text-decoration: none;font-size: 14px;font-weight: 600;}
 
 .promobtn {
-    margin: 11px 20px;
+    /* margin: 10px 0%; */
+    /* float: left; */
     display: inline-block;
 }
 
@@ -1699,4 +1704,66 @@ header.booknow {
 
 #promo div {
     text-shadow: 2px 2px 5px #000;
+}
+
+.shimmer {
+  text-align: center;
+  color: rgba(255,255,255,0.1);
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #222;
+}
+@-moz-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-o-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+.tmpPromo:hover div {
+        background-color: rgba(255,255,255,.6);
 }

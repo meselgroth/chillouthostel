@@ -59,7 +59,8 @@
     }
     
     .tmpPromo {
-    width: 52%;
+    width: 100%;
+    margin-bottom: 10px;
     }
 
     #select_personas {
@@ -86,11 +87,18 @@
         -o-transition: all 0.3s ease-in-out;
         -ms-transition: all 0.3s ease-in-out;
     }
+    a.btn.search-btn.btn-with-promo {
+    /* float: none; */
+    /* padding: 7px 15px; */
+    width: 100%;
+    /* display: inline-block; */
+}
 
     #browse {
         margin: 73px 15px 0;
         width: calc(100% - 30px);
-        height: 205px;
+        height: 241px;
+        padding: 23px 47px;
     }
 
     #section_destinos,
@@ -219,7 +227,8 @@
     }
 
     #browse {
-        height: 235px;
+        height: 257px;
+        padding: 27px;
     }
 }
 
@@ -238,7 +247,21 @@
 
     #browse {
         height: 250px;
+        text-align:center
     }
+    .tmpPromo {
+        width: 100%;
+        margin-bottom: 19px;
+    }
+    .tmpPromo h4{
+        float:none;
+        color:rgba(0,0,0,0.8);
+    }
+    a.btn.search-btn.btn-with-promo {
+    float: none;
+    width: 50%;
+    display: inline-block;
+}
 }
 
 @media only screen and (min-width: 568px) {
@@ -420,12 +443,19 @@
     .tmpPromo {
     width: 34%;
     }
+    .tmpPromo h4{
+        float:left;
+        color: rgba(0,0,0,0);
+    }
 
     #select_personas {
         width: 30%;
     }
 
     .btn {
+        width: 30%;
+    }
+    a.btn.search-btn.btn-with-promo {
         width: 30%;
     }
 
@@ -486,6 +516,7 @@
     }
     .tmpPromo {
     width: 58%;
+    text-align: left;
     }
 
     #select_personas {
@@ -513,6 +544,9 @@
         -ms-transition: all 0.3s ease-in-out;
     }
 
+    a.btn.search-btn.btn-with-promo {
+        width: 20%;
+    }
     #sectionIcon .icon {
         float: left;
         margin: 0 25px 0 0;
