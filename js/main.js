@@ -16,6 +16,12 @@ $(document).ready(function () {
         $("#destinoOption_f").fadeIn("slow", function () {
         });
     });
+    
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+    if (isChrome) {
+        $('.tmpPromo').addClass('shimmer');
+    }
 });
 
 
