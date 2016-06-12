@@ -39,17 +39,17 @@
 /* Menu Button */
 .menu-button {
 	  position: absolute;
-  z-index: 1000;
-  padding: 0;
-  width: 27px;
-  height: 15px;
-  border: none;
-  text-indent: 2.5em;
-  font-size: 1.5em;
-  color: transparent;
-  background: transparent;
-  right: 40px;
-  top: 32px;
+	  z-index: 1000;
+	  padding: 0;
+	  width: 27px;
+	  height: 15px;
+	  border: none;
+	  text-indent: 2.5em;
+	  font-size: 1.5em;
+	  color: transparent;
+	  background: transparent;
+	  right: 40px;
+	  top: 5px;
 }
 
 .menu-button::before {
