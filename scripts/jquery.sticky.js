@@ -33,11 +33,12 @@
         documentHeight = $document.height(),
         dwh = documentHeight - windowHeight,
         extra = (scrollTop > dwh) ? dwh - scrollTop : 0;
-
+      extra = extra - 90;
+        
       for (var i = 0; i < sticked.length; i++) {
         var s = sticked[i],
           elementTop = s.stickyWrapper.offset().top,
-          etse = elementTop - s.topSpacing - extra;
+          etse = elementTop - s.topSpacing - extra + 20;
 
         if (scrollTop <= etse) {
           if (s.currentTop !== null) {

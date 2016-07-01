@@ -8,27 +8,39 @@ module.exports = function (grunt) {
             '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
             '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
             '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-            ' Licensed <%= props.license %> */\n',
+            ' Licensed Chill Out Hostel Inc. */\n',
         // Task configuration
-        concat: {
-            options: {
-                banner: '<%= banner %>',
-                stripBanners: true
-            },
-            dist: {
-                src: ['lib/chillouthostel.js'],
-                dest: 'dist/chillouthostel.js'
-            }
+        useminPrepare: {
+            html: 'index.html'
         },
-        uglify: {
-            options: {
-                banner: '<%= banner %>'
-            },
-            dist: {
-                src: '<%= concat.dist.dest %>',
-                dest: 'dist/chillouthostel.min.js'
-            }
+        usemin: {
+            html: 'dist/index.html'
         },
+        //cssmin: {
+        //    build: {
+        //        src: 'content/*.css',
+        //        dest: 'dist/chillouthostel.css'
+        //    }
+        //},
+        //concat: {
+        //    options: {
+        //        banner: '<%= banner %>',
+        //        stripBanners: true
+        //    },
+        //    dist: {
+        //        src: ['js/main.js'],
+        //        dest: 'dist/chillouthostel.js'
+        //    }
+        //},
+        //uglify: {
+        //    options: {
+        //        banner: '<%= banner %>'
+        //    },
+        //    dist: {
+        //        src: '<%= concat.dist.dest %>',
+        //        dest: 'dist/chillouthostel.min.js'
+        //    }
+        //},
         jshint: {
             options: {
                 node: true,
@@ -69,13 +81,22 @@ module.exports = function (grunt) {
     });
 
     // These plugins provide necessary tasks
+    grunt.loadNpmTasks('grunt-usemin');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task
-    grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+    grunt.registerTask('default', [
+        'jshint',
+        'useminPrepare',
+        'concat:generated',
+        'cssmin:generated',
+        'uglify:generated',
+        'usemin'
+    ]);
 };
 

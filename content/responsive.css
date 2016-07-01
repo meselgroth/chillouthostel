@@ -286,6 +286,7 @@
             margin: 65px 0 17px;
             font-weight: 700;
             line-height: 0.8;
+            text-shadow: 0px 0px 4px #000;
         }
 
     aside {
@@ -645,4 +646,3 @@
 /*--- END MEDIA QUERY ---*/
 #select_personas{
     visibility:hidden;
-}

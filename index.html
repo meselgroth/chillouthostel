@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="/favicon.ico" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <meta property="og:title" content="Chill Out Hostel - chill escape enjoy.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="http://chillouthostelboracay.com/images/logo.jpg">
@@ -24,15 +24,19 @@
     <meta name="author" content="Michael Eselgroth">
     <meta name="generator" content="Chill Out Hostel Boracay">
     <title>Chill Out Hostel - chill escape enjoy.</title>
-
-    <link href="./content/fonts.css" rel="stylesheet" />
+    
+    <!-- build:css(.) content/vendor.css -->
     <link rel="stylesheet" href="./content/bootstrap.css">
+    <!-- endbuild -->
+    <!-- build:css(.tmp) content/main.css -->
+    <link href="./content/fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="./content/style.css">
     <link rel="stylesheet" href="./content/responsive.css">
     <link rel="stylesheet" href="./content/menu_sideslide.css">
-    <link rel="stylesheet" href="./template_files/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="./template_files/selectize.default.css">
-    <link rel="stylesheet" href="./template_files/selectize_clh_theme.css">
+    <!--<link rel="stylesheet" href="./content/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="./content/selectize.default.css">
+    <link rel="stylesheet" href="./content/selectize_clh_theme.css">-->
+    <!-- endbuild -->
 
     <!--<link rel="alternate" hreflang="es" href="https://chillouthostelboracay.com/es/">
     <link rel="alternate" hreflang="pt" href="https://chillouthostelboracay.com/pt/">
@@ -269,7 +273,7 @@
                 <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                <div class="item">
+                <div class="item active">
                     <div id="slide_1"></div>
                     <div class="carousel-caption"></div>
                 </div>
@@ -281,7 +285,7 @@
                     <div id="slide_3"></div>
                     <div class="carousel-caption"></div>
                 </div>
-                <div class="item active">
+                <div class="item">
                     <div id="slide_4"></div>
                     <div class="carousel-caption"></div>
                 </div>
@@ -611,24 +615,26 @@
         </div>
     </footer>
     <!-- END FOOTER -->
-
-    <script src="./template_files/jquery.min.js"></script>
     <!--<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>-->
+    
+    <!-- build:js(.) scripts/vendor.js -->
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <!-- endbuild -->
 
-    <script src="./template_files/bootstrap.min.js"></script>
-    <script src="./js/classie.js"></script>
-
-    <script type="text/javascript" src="./template_files/jquery.sticky.js"></script>
-    <script type="text/javascript" src="./template_files/moment-with-locales.js"></script>
-    <script type="text/javascript" src="./template_files/bootstrap-datepicker.min.js"></script>
-    <script type="text/javascript" src="./template_files/bootstrap-datepicker.en-GB.min.js"></script>
-    <script type="text/javascript" src="./template_files/bootstrap-datepicker.es.min.js"></script>
-    <script type="text/javascript" src="./template_files/bootstrap-datepicker.pt.min.js"></script>
-    <script type="text/javascript" src="./template_files/select2.full.min.js"></script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="./scripts/classie.js"></script>
+    <script type="text/javascript" src="./scripts/jquery.sticky.js"></script>
+    <!--<script type="text/javascript" src="./scripts/moment-with-locales.js"></script>
+    <script type="text/javascript" src="./scripts/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="./scripts/bootstrap-datepicker.en-GB.min.js"></script>
+    <script type="text/javascript" src="./scripts/bootstrap-datepicker.es.min.js"></script>
+    <script type="text/javascript" src="./scripts/bootstrap-datepicker.pt.min.js"></script>
+    <script type="text/javascript" src="./scripts/select2.full.min.js"></script>
+    <script src="./scripts/funciones.js"></script>-->
 
     <script src="./js/menu.js"></script>
-    <script src="./template_files/funciones.js"></script>
-
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
