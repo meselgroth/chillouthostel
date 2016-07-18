@@ -11,10 +11,18 @@ module.exports = function (grunt) {
             ' Licensed Chill Out Hostel Inc. */\n',
         // Task configuration
         useminPrepare: {
-            html: 'index.html'
+            html: 'index-build.html'
         },
         usemin: {
-            html: 'dist/index.html'
+            html: 'index.html'
+        },
+        copy: {
+            main: {
+                expand: true,
+                filter: 'isFile',
+                src: 'index-build.html',
+                dest: 'index.html'
+            }
         },
         //cssmin: {
         //    build: {
@@ -83,6 +91,7 @@ module.exports = function (grunt) {
     // These plugins provide necessary tasks
     grunt.loadNpmTasks('grunt-usemin');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-qunit');
