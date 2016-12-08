@@ -11,7 +11,10 @@ module.exports = function (grunt) {
             ' Licensed Chill Out Hostel Inc. */\n',
         // Task configuration
         useminPrepare: {
-            html: 'index-build.html'
+            html: 'index-build.html',
+            options: {
+                dest: '.'
+            }
         },
         usemin: {
             html: 'index.html'
@@ -21,7 +24,10 @@ module.exports = function (grunt) {
                 expand: true,
                 filter: 'isFile',
                 src: 'index-build.html',
-                dest: 'index.html'
+                dest: '.',
+                rename: function() {
+                    return 'index.html';
+                }   
             }
         },
         //cssmin: {
@@ -73,17 +79,10 @@ module.exports = function (grunt) {
                 src: ['lib/**/*.js', 'test/**/*.js']
             }
         },
-        qunit: {
-            files: ['test/**/*.html']
-        },
         watch: {
             gruntfile: {
                 files: '<%= jshint.gruntfile.src %>',
                 tasks: ['jshint:gruntfile']
-            },
-            lib_test: {
-                files: '<%= jshint.lib_test.src %>',
-                tasks: ['jshint:lib_test', 'qunit']
             }
         }
     });
@@ -94,7 +93,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -105,6 +103,7 @@ module.exports = function (grunt) {
         'concat:generated',
         'cssmin:generated',
         'uglify:generated',
+        'copy',
         'usemin'
     ]);
 };

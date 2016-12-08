@@ -570,7 +570,7 @@
     }
 
     aside {
-        margin: 20px 0 0;
+        margin: 0;
         overflow: hidden;
         padding: 0;
         width: 100%;
@@ -644,5 +644,6 @@
 @media only screen and (min-width: 1400px) {
 }
 /*--- END MEDIA QUERY ---*/
-#select_personas{
-    visibility:hidden;
+#select_personas {
+    visibility: hidden;
+}
