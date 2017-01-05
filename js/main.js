@@ -22,6 +22,11 @@ $(document).ready(function () {
     if (isChrome) {
         $('.tmpPromo').addClass('shimmer');
     }
+
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({always_show_close:false});
+    });
 });
 
 function cambiarSelect(campoA, campoB) {
