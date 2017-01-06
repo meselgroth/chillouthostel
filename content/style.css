@@ -131,8 +131,9 @@ h6 {
 .welcome {
     color: #ffffff;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     text-align: justify;
+    text-shadow: 0px 0px 2px #fff;
 }
 
 .pad-port-1 {
@@ -2103,4 +2104,16 @@ header.booknow {
 
 .pad-bottom-30 {
     padding-bottom: 30px;
+}
+
+.glyph-circle {
+    color: #fff;
+    font-size: 15px;
+    margin: 26% 0 0 18%;
+}
+
+.glyph-circle-container {
+    width: 32px;
+    height: 32px;
+    background: #002d62;
 }
