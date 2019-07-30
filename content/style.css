@@ -401,6 +401,28 @@ select {
     -ms-background-size: cover;
 }
 
+#slide_6 {
+    background: url(../img/bg/_DSC6616.JPG) left top no-repeat;
+    width: 100%;
+    height: 644px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+
+#slide_7 {
+    background: url(../img/bg/_DSC6630.JPG) left top no-repeat;
+    width: 100%;
+    height: 644px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+
 #slide_c {
     background: url(../img/bg/header_bg_1920.jpg) left top no-repeat;
     width: 100%;
